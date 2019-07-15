@@ -1,0 +1,3 @@
+.compare-left{width:25vw;text-align:center;display: inline-block}
+.compare-left>view{border-top: 1px solid #f0eff5;border-right: 1px solid #f0eff5;height: 12vw;line-height: 1.5;display: flex;align-items: center;justify-content: space-around;}
+.compare-left image{width:4vw;height:3vw}

@@ -1,0 +1,27 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='container'>
+  <!-- <view class='search-wrapper'>
+    <input bindblur='searchResults' focus class='search' placeholder='{{placeholder}}'></input>
+    <image src='../../image/search_icon.png' class='search-icon'></image>
+  </view> -->
+  <view class='search-wrapper flex' style='justify-content:space-around'>
+    <view class='flex' style='width:85vw;height:8.75vw;background:#fff;border-radius:5px;overflow:hidden;justify-content:space-between;'>
+      <input bindinput='searchValue' bindconfirm="searchResults" bindblur="blur" bindfocus="focus" focus="{{focus}}" placeholder='{{placeholder}}' value="{{value}}" style='width:60vw;padding-left:5vw;'></input>
+      <view bindtap='detailValue' class='flex' style='width:8vw;height:100%;justify-content:space-around;'><image wx:if="{{value.length>0}}" src='../../image/icon_close_alt2.png' style='width:3vw;height:3vw;'></image></view>
+      <view bindtap='searchResults' data-value='{{value}}' class='flex' style='width:10vw;height:60%;justify-content:space-around;border-left:1px solid #e4e4e4;'><image src='../../image/search_icon.png' style='width:4vw;height:4vw;'></image></view>
+    </view>
+    <view bindtap='returnCancel' style='width:8vw;'>取消</view>
+  </view>
+
+  <view class='content-wrapper' style='padding-top:4vw'>
+    <view wx:if="{{searchValue!=''}}" bindtap='mohusearch' data-value='{{searchValue}}' class=' borderBottom' style='justify-content:space-between;line-height:2;padding:2vw 0;'>
+      <view class='zhejiang-content-color title-font info'>{{searchValue}}</view>
+      <view class='zhejiang-info-color'>模糊搜索</view>
+    </view>
+    <view bindtap='chooseMajor' wx:key="" data-name='{{item.Name}}' class=' borderBottom' style='justify-content:space-between;line-height:2;padding:2vw 0;' wx:for="{{searchMajorList}}">
+      <rich-text nodes="{{item.newName}}" class='title-font'></rich-text>
+      <view class='zhejiang-info-color'>学历层次:本科</view>
+    </view>
+  </view>
+</view>

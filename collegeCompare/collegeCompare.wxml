@@ -1,0 +1,44 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class="wrapper">
+  <view class='search search-view content-color' bindtap="goSearch">添加院校
+    <image src='../../image/search_icon.png'></image>
+  </view>
+  <view class='flex content-wrapper borderBottom' style='line-height:3;margin-top:3.33vw'>
+
+    <view class='flex' style='justify-content:space-between;width:85vw;margin-left:4vw'>
+      <view class='zhejiang-info-color'>历史记录</view>
+      <image bindtap='clear' src='../../image/laji_icon.png' style='width:3.5vw;height:4vw'></image>
+    </view>
+  </view>
+  <scroll-view scroll-y style='height:67vh;'>
+    <view wx:for="{{collegeCompareList}}" class='borderBottom' style='background:#fff'>
+      <view class='flex'>
+        <view style='width:14vw;height:18vw;line-height:18vw;' bindtap='chooseCollegeNo' data-index='{{index}}' data-id='{{item.CollegeId}}' wx:if="{{item.st==true}}">
+          <image src='../../image/zhiyuanbiao_checked.jpg' style='width:4vw;height:4vw'></image>
+        </view>
+        <view style='width:14vw;height:18vw;line-height:18vw;' bindtap='chooseCollege' data-index='{{index}}' data-id='{{item.CollegeId}}' wx:else>
+          <image src='../../image/zhiyuanbiao_checked_no.jpg' style='width:4vw;height:4vw'></image>
+        </view>
+        <navigator style='width:100%' url='../collegeDetail/collegeDetail?id={{item.CollegeId}}'>
+          <view>
+            <view class='title-font' style='text-align:left'>{{item.CnName}}</view>
+            <view class='zhejiang-info-color' style='text-align:left'>综合排名：{{item.RankOfCn}}
+              <text class='levels'>{{item.Level}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='flex' style='justify-content:space-around;position:absolute;bottom:0;width:100vw;border-top:1px solid #f0eff5;padding-top:0'>
+    <view class='content-font video-hot-color'>已选
+      <text class='info' style='font-size:8vw'> {{num}}</text> / 6</view>
+    <block wx:if="{{num>1 && num <=6}}">
+      <view class='youcipingBtn' bindtap='compareStart'>开始对比</view>
+    </block>
+    <block wx:else>
+      <view class='moren' bindtap='compareYaoqiu'>开始对比</view>
+    </block>
+  </view>
+</view>

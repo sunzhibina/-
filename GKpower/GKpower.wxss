@@ -1,0 +1,4 @@
+.VIPpower{text-align: center;color: #666666;line-height: 2;margin-top: 30vw;}
+.VIPpower image{width:  54.17vw;height: 44.44vw;}
+.payBtn{color: #fff;margin-top: 15vw;}
+.dian{width:3.5vw;height:3.5vw;background:#999;border-radius:100%;margin-right:2vw;}

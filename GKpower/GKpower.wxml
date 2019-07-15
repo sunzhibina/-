@@ -1,0 +1,17 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='content-wrapper content-font VIPpower' style='line-height:3;height:90vh;margin-top:0;padding-top:10vh;'>
+  <image src="../../image/VIPpower.png" style='width:44.17vw;height:34.44vw;'></image>
+  <view style='padding-left:5vw;'>
+    <view class='zhejiang-info-color' style='text-align:left;'>在高考志愿期间，非2018年高考用户以下限制</view>
+    <view class='zhejiang-content-color'>
+      <view class='flex'><view class='dian'></view>无法使用高考分数</view>
+      <view class='flex'><view class='dian'></view>无法使用模拟填报功能（包含一键填报）</view>
+      <view class='flex'><view class='dian'></view>无法查看志愿表</view>
+    </view>
+  </view>
+  <view style='position:fixed;bottom:5vh;width:90vw;'>
+    <view class='zhejiang-info-color'>您的高考年份 {{GKYear==0?"非2018":GKYear}}（8月下旬取消限制）</view>
+    <button class='tuijian-btn btn-font payBtn btn-color' bindtap='photoCall' style='margin-top:2vw;'>高考志愿帮助热线</button>
+  </view>
+</view>

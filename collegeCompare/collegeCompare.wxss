@@ -1,0 +1,3 @@
+.wrapper{padding-top: 3.33vw;background: #f0eff5;text-align: center;font-size: 3.33vw;line-height: 2}
+.youcipingBtn{width:50vw;background:#e9302d;color:#fff;text-align:center;height:10vw;line-height:10vw;font-size:3.33vw;border-radius:30px;box-shadow:0px0px5px#e9302d;}
+.moren{width:50vw;background:#f0eff5;color:#fff;text-align:center;height:10vw;line-height:10vw;font-size:3.33vw;border-radius:30px;box-shadow:0px0px5px#e9302d;}

@@ -1,0 +1,21 @@
+.content-font{
+  line-height: 3;
+}
+.dep-top-wrapper,.dep-list{
+  display: flex;
+  border-bottom: 1px solid #dedddb;
+}
+.count-font{
+  color: #e9302d;
+  margin-right: 10vw;
+}
+.dep-list{
+  justify-content: space-between;
+}
+
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

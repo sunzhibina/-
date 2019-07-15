@@ -1,0 +1,64 @@
+.shangHaiTop{
+  margin-top: 4.86vw;
+}
+.shangHaiTop input{
+  width: 70vw;
+  height: 8vw;
+  line-height: 8vw;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: #7b7b7b;
+  border-radius: 5px;
+  margin-left: 4vw;
+}
+.shangHaiTop input{
+  text-align: center;
+}
+
+.shangHaiBottom{
+  display:flex;
+  flex-wrap:wrap;
+  margin:6.25vw 1.38vw 0;
+  width:72vw;
+  margin-left:3vw;
+}
+.shangHaiBottom .shangHaiBottom-items{
+  width: 22.22vw;
+  height: 8.33vw;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  background: #f7f6f5;
+  text-align: center;
+  line-height: 8.33vw;
+  margin: 0 0.6vw 1.2vw; 
+}
+.shangHaiBottom image{
+  width: 2.5vw;
+  height: 2.5vw;
+  position: absolute;
+  right: 0.28vw;
+  bottom: 0.28vw;
+}
+.shangHaiBottom .shangHaiBottom-items-checked{
+  background: #fff;
+  width: 22.22vw;
+  height: 8.33vw;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  line-height: 8.33vw;
+  margin: 0 0.6vw 1.2vw; 
+  position: relative;
+}
+.tuijian-btn{
+  width: 83.33vw;
+  height: 12.22vw;
+  color: #fff;
+  line-height: 12.22vw;
+  margin-top: 5vw;
+}
+.swiper-tab {text-align: center;line-height: 70rpx;background: #fff;z-index: 2;display: flex;justify-content: space-around;margin: auto;}
+.swiper-tab-list {color: #080808;}
+.courseStyle{width:33vw;height:10vw;border:1px solid #f0eff5;border-radius:5px;text-align:center;line-height:10vw;}

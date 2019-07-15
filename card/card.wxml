@@ -1,0 +1,30 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' sharePageBack="{{sharePageBack}}" id="navigationcustom"> </navigationcustomtop>
+
+<view class='container' style='padding:4.3vw;'>
+  <view wx:if="{{mobile}}" class='zhejiang-info-color' style='margin-bottom:2vw;'>会员卡和手机号{{mobile}}进行绑定</view>
+  <view>
+    <view class='zycardInput' style='padding:4vw;background:#fff;border-radius:8px;'>
+      <input bindfocus="focusInput" focus="{{focus1}}" bindblur="blurInput" data-id='1' value='{{cardName}}' class='title-font' type='number' placeholder='请输入志愿卡/升学卡/体验卡号' bindinput='cardhao'></input>
+    </view>
+    <view class='zycardInput' style='padding:4vw;background:#fff;border-radius:8px;'>
+      <input bindfocus="focusInput" focus="{{focus2}}" bindblur="blurInput" data-id='2' value='{{cardPassword}}' class='title-font' placeholder='请输入会员卡密码' password='true' type='number' bindinput='pressword'></input>
+    </view>
+  </view>
+  <view class='flex' style='justify-content:space-between;padding:0 0 5vw 0;'>
+    <view bindtap='buyCardTap' class='cardText buyCard'>购买会员卡</view>
+    <!-- <view bindtap='findCardTap' class='cardText buyCard'>找不到卡号密码？</view> -->
+  </view>
+  <button loading='{{btnCheckedFlag}}' disabled='{{btnCheckedFlag}}' bindtap="{{cardName!='' && cardPassword!=''?'undapeCard':''}}" class="recommend-btn oneFontSize" style="{{cardName!='' && cardPassword!=''?'':'opacity:0.6;'}}width:91.4vw;">激活</button>
+  <view wx:if="{{findCard}}">
+    <view bindtap='windowCloseTap' class='wrap {{wrapAnimate}}' style='background: rgba(0,0,0,0.5);z-index:10;'></view>
+    <view class='window-wrapper' style='z-index:11'>
+      <view style='text-align:center;font-size:4.3vw;padding:4vw 0;'>卡号密码 位置示意</view>
+      <image class='ZYCardImage' src='../../image/ZYCardImage.jpg'></image>
+      <view style='width:2px;height:6.4vw;background: #fff;position:relative;left:40vw;'></view>
+      <view>
+        <image bindtap='windowCloseTap' class='windowClose' src='../../image/windowClose.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='zhejiang-content-color' style='position:absolute;bottom:20vw;text-align:center;font-size: 3.47vw;color: #999999;letter-spacing: 0;text-align: justify;text-align:center;width:91.4vw;'>客服热线 <text bindtap='photoCall'>400-181-5008</text></view>
+</view>

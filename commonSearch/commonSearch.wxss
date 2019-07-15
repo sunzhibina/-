@@ -1,0 +1,15 @@
+.search-wrapper{
+  padding: 2.8vw 0;
+  position: relative;
+}
+.search-wrapper input{
+   padding-left: 8vw; 
+}
+.search-icon{
+  width: 3.47vw;
+  height: 3.47vw;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.735vw;
+  left: 5.5vw;
+}

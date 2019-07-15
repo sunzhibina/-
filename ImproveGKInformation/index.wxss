@@ -1,0 +1,78 @@
+
+
+page {
+  background: #f8f5f4;
+}
+
+.chooseBorder {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6.03px;
+  font-size: 4vw;
+  color: #333;
+  padding: 2.7vw 6.8vw;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 0 4.27vw 0;
+  line-height: 4vw;
+}
+
+.rightIcon {
+  width: 2.13vw;
+  height: 4vw;
+}
+
+.itemTitle {
+  margin: 5.33vw 0 2.67vw 0;
+}
+
+.itemIconWH {
+  width: 3.73vw;
+  height: 4.8vw;
+}
+
+.tips {
+  margin-top: 1.07vw;
+}
+
+.cityListWindow-view {
+}
+
+.cityListWindow {
+  background: #fff;
+  /* height: 76.09vh; */
+  z-index: 11;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  /* width: 84vw; */
+  border-radius: 6px;
+}
+
+.windowClose {
+  height: 4.13vw;
+  width: 4.13vw;
+}
+
+.chooseProvince {
+  color: #000;
+  letter-spacing: 0;
+  line-height: 4.8vw;
+  font-size: 4.8vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.2vw;
+  justify-content: space-between;
+}
+
+.citySingle {
+  font-size: 4vw;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 4vw;
+  padding: 4.4vw 0 4.4vw 8vw;
+}
+
+.cityHover {
+  background: #f7f7f7;
+}

@@ -1,0 +1,32 @@
+/* pages/publicSearch/publicSearch.wxss */
+@import "/common.wxss";
+
+page {
+  background: #f8f5f4;
+}
+
+.collegeLogo {
+  width: 9.07vw;
+  height: 9.07vw;
+  margin-right: 3.2vw;
+}
+
+.selectBlock {
+  height: 8.53vw;
+  width: 22.4vw;
+  border-radius: 1.07vw;
+}
+
+.selectBlockFont {
+  color: #4a4a4a;
+}
+
+.selectBlockColor {
+  background: #f7f7f7;
+  border-radius: 1.07vw;
+}
+
+.operationBtnWH {
+  width: 25.33vw;
+  height: 9.07vw;
+}

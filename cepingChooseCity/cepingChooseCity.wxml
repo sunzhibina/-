@@ -1,0 +1,13 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='chooseCity-wrapper container'>
+  <view bindtap='cepingChooseCity' data-id="843" class="{{current==843?'on':''}}">浙江</view>
+  <view bindtap='cepingChooseCity' data-id="842" class="zhejiang-info-color {{current==842?'on':''}}">上海</view>
+  <view bindtap='cepingChooseCity' data-id="847" class="zhejiang-info-color {{current==847?'on':''}}">山东</view>
+  <view bindtap='cepingChooseCity' data-id="834" class="zhejiang-info-color {{current==834?'on':''}}">北京</view>
+  <view bindtap='cepingChooseCity' data-id="835" class="zhejiang-info-color {{current==835?'on':''}}">天津</view>
+  <view bindtap='cepingChooseCity' data-id="853" class="zhejiang-info-color {{current==853?'on':''}}">海南</view>
+</view>
+
+
+<view wx:if="{{cepingTishi==true}}" class='zanTishi {{cepingTishi==true?"zanTishiAnimate":""}}'>即将开放</view>

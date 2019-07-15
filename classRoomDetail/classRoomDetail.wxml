@@ -1,0 +1,110 @@
+<navigationcustomtop share="{{share}}" navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' sharePageBack="{{sharePageBack}}" id="navigationcustom"> </navigationcustomtop>
+<block wx:if="{{showLoad}}">
+  <view class='loading'>
+    <image src='../../image/loading_icon1.gif'></image>
+    <view style='margin-top:5.56vw'>加载中...</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="container">
+    <block wx:if="{{(userInfo[0].UserType==14 && packType==2) || packType==1}}">
+      <video src="{{setctionUrl}}"></video>
+    </block>
+    <block wx:else>
+      <view class='payShengxue-wrapper title-font'>
+        <block wx:if="{{!isIos}}">
+          <view>学习课程,仅供升学卡观看</view>
+          <view>开通升学卡所有课程免费看</view>
+          <view class='payShengxue content-font' bindtap='goPay'>开通升学卡</view>
+        </block>
+        <block wx:else>
+          <view>学习课程,仅供升学卡用户观看</view>
+          <!-- <view class='payShengxue content-font' bindtap='noPay' style='width:50vw;'>{{payBtnText}}</view> -->
+        </block>
+      </view>
+    </block>
+    <scroll-view scroll-y style='height:55vh;background:#fff'>
+      <view class='packInfo-wrapper'>
+        <view class='title-font content-wrapper'>{{packDetail.title}}</view>
+        <view class='packTeacher-wrapper content-wrapper'>
+          <image src='{{packDetail.imgUrl}}'></image>
+          <view>{{packDetail.teacherName}}</view>
+        </view>
+        <view class='content-wrapper video-content-color packIntro {{open==false?"open":""}}'>{{packDetail.introduction}}</view>
+      </view>
+      <view class='sections-wrapper'>
+        <view class='pack-title content-wrapper sectionsList-wrapper'>
+          <view>课程列表</view>
+          <view>{{packDetail.sectionCount}}课时</view>
+        </view>
+        <block wx:for="{{packDetail.chapters}}" wx:key="" wx:for-item="Chapters" wx:for-index="chaptersIndex">
+          <view wx:if="{{Chapters.name!=null}}" bindtap='chaptersTitle' data-index='{{chaptersIndex}}' class='content-wrapper Chapters-title flex'>
+            <view>{{Chapters.name}}</view>
+            <image wx:if="{{chaptersIndex!=chooseChaptersIndex}}" src='../../image/right_logo.png' style='width:2.22vw;height:4.03vw;'></image>
+            <image wx:if="{{chaptersIndex==chooseChaptersIndex}}" src='../../image/down_logo.png' style='width:4.03vw;height:2.22vw;'></image>
+          </view>
+          <block wx:if="{{chaptersIndex==chooseChaptersIndex}}" wx:for="{{Chapters.sections}}" wx:key="">
+            <view bindtap='sectionsList' data-id='{{item.sectionId}}' data-url='{{item.setctionUrl}}' class='sectionsList-wrapper video-content-color content-wrapper {{current==item.sectionId?"info":""}}'>
+              <image src='{{current==item.sectionId?"../../image/play.png":""}}'></image>
+              <view class='sectionsList-title'>{{item.sectionTitle}}</view>
+              <view style='width:15vw;text-align:right'>{{item.sectionTime}}</view>
+            </view>
+          </block>
+        </block>
+      </view>
+      <!-- <view class='pinglun-wrapper'>
+        <view class='pack-title content-wrapper'>课程评论</view>
+      </view>
+      <block wx:if="{{shafaFlag==false}}">
+        <view wx:for="{{talkList.AnswerOutput}}" wx:key="" class='content-wrapper pinglunList-wrapper'>
+          <view wx:if="{{zanTishi==true && item.Id==answerId}}" class='zanTishi {{zanTishi==true?"zanTishiAnimate":""}}'>您已经赞过了哦！</view>
+          <view class='flex'>
+            <image class='userHead' src='{{item.UserAvatarUrl==null || item.UserAvatarUrl==""?"../../image/header_icon1.png":item.UserAvatarUrl}}'></image>
+            <view>
+              <view class='flex' style='line-height:1.5'>
+                <view>{{item.UserName}}</view>
+                <image class='pinglun-vip' wx:if="{{item.UserTags.length>0}}" src='../../image/vip_icon1.png'></image>
+              </view>
+              <view class='video-content-color'>{{item.UserProvince}}</view>
+            </view>
+          </view>
+          <view class='pinglun-body'>{{item.Body}}</view>
+          <view class='flex pinglun-zan video-content-color'>
+            <view bindtap='dianzan' data-id='{{item.Id}}' data-index='{{index}}' class='flex' style='position:relative'>
+              <image class='zanLogo' src='../../image/zan_icon.png'></image>
+              <view>{{item.FabulousCount}}</view>
+              <view wx:if="{{answerId==item.Id}}" class='zan-add {{addZan?"zan-add-anim":""}}'>+1</view>
+            </view>
+            <view>{{item.CreationTimeFormat}}</view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{shafaFlag==true}}">
+        <view class='shafa-wrapper'>
+          <image class='shafa-image' src='../../image/shafa_icon.png'></image>
+          <view class='title-font video-title-color'>暂无回答</view>
+          <view class='video-content-color'>抢个沙发吧</view>
+        </view>
+      </block> -->
+    </scroll-view>
+
+    <!-- <block wx:if="{{shareCome==false}}">
+      <view wx:if="{{pinglunTishi==true}}" class='zanTishi {{pinglunTishi==true?"zanTishiAnimate":""}}'>评论成功！</view>
+      <view class='bottom-pinglun-wrapper content-wrapper'>
+        <input bindinput='getBody' placeholder="请输入您的评论" value='{{body}}' class='title-font'></input>
+        <view bindtap='pinglun'>评论</view>
+      </view>
+    </block>
+    <block wx:else>
+      <form report-submit bindsubmit="goIndex" style='position:fixed;bottom:0;width:100vw;'>
+        <button form-type="submit" class='btn-color' style='color:#fff;border-radius:0;'>高考志愿填报</button>
+        <button form-type="submit" style='z-index:2;width:15vw;height:15vw;box-shadow:0px 0px 10px #e4e4e4;position:fixed;bottom:20vw;right:5vw;background:rgba(255,255,255,0.7);border-radius:100%;display:flex;padding:0;'>
+          <view style='width:10vw;margin:auto;height:10vw;display:flex;flex-direction:column;align-items:center;justify-content:space-around;'>
+            <image src='../../image/returnHome.png' style='width:4vw;height:5vw;'></image>
+            <text class='point-font info'>返回首页</text>
+          </view>
+        </button>
+      </form>
+    </block> -->
+  </view>
+</block>

@@ -1,0 +1,45 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='container' style='min-height:100vh'>
+  <view></view>
+  <view class='flex'>
+    <view class='flex' style='width:40vw;padding-right:10vw;justify-content:space-between;'>
+      <view>男女比例 50:50</view>
+      <view>适合<text class='info'>女生</text></view>
+    </view>
+    <view class='flex'>
+      <view>招生院校<text class='info'> 3 </text>所</view>
+      <view><text class='info'>冷门</text>专业</view>
+    </view>
+  </view>
+  <view class='flex' style='border-top:1px dotted #f0eff5'>
+    <view class='flex' style='width:40vw;padding-right:10vw;justify-content:space-between;'>
+      <view>学制 {{item.LearnYear}} 年</view>
+      <view>对口率<text class='info'>高</text></view>
+    </view>
+    <view>本科>经济学</view>
+  </view>
+
+  <view class='zhejiang-info-color' style='width:96vw;margin:auto;'>
+    <view style='padding:0 4.8vw;line-height:3'>含专业数：{{MiddleMajors[0].SmallMajors.length}}</view>
+    <view wx:for="{{MiddleMajors[0].SmallMajors}}" class='content-wrapper' style='background:#fff;padding:3vw;border-radius:4px;margin-bottom:2vw;box-shadow:0px 3px 5px #999;line-height:2.5'>
+      <view class='title-font zhejiang-content-color'>{{item.Name}}</view>
+      <view class='flex'>
+        <view class='flex' style='width:40vw;padding-right:10vw;justify-content:space-between;'>
+          <view>男女比例 {{item.Male}}0:{{item.Female}}0</view>
+          <view>适合<text class='info'>女生</text></view>
+        </view>
+        <view class='flex'>
+          <view>招生院校<text class='info'> 3 </text>所</view>
+          <view><text class='info'>冷门</text>专业</view>
+        </view>
+      </view>
+      <view class='flex' style='border-top:1px dotted #f0eff5'>
+        <view class='flex' style='width:40vw;padding-right:10vw;justify-content:space-between;'>
+          <view>学制 {{item.LearnYear}} 年</view>
+          <view>对口率<text class='info'>高</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<block wx:if="{{showLoad}}">
+  <view class='loading'>
+    <image src='../../image/loading_icon1.gif'></image>
+    <view style='margin-top:5.56vw'>加载中...</view>
+  </view>
+</block>
+<block wx:else>
+  <view style='display:flex'>
+    <view class='zhejiang-info-color compare-left content-font'>
+      <view style='height:14vw;padding:2vw'>院校</view>
+      <block wx:if="{{cityId==843 || cityId==842}}">
+        <view class='zhejiang-content-color' style='background:#f0eff5;'>17招生计划</view>
+        <view class='zhejiang-content-color' style='background:#f0eff5;border-top:1px solid #fff'>招生专业数</view>
+      </block>
+      <block wx:else>
+        <view class='zhejiang-content-color' style='background:#f0eff5;'>17分数线({{course==0?'理':'文'}})</view>
+        <view class='zhejiang-content-color' style='background:#f0eff5;border-top:1px solid #fff'>17最低录取位次({{course==0?'理':'文'}})</view>
+        <view class='zhejiang-content-color' style='background:#f0eff5;border-top:1px solid #fff'>17招生计划({{course==0?'理':'文'}})</view>
+        <view class='zhejiang-content-color' style='background:#f0eff5;border-top:1px solid #fff'>招生专业数({{course==0?'理':'文'}})</view>
+        <view class='zhejiang-content-color' style='background:#f0eff5;border-top:1px solid #fff'>录取概率</view>
+      </block>
+      <view>综合排名</view>
+      <view>所属地区</view>
+      <view>创办时间</view>
+      <view>办学性质</view>
+      <view>隶属于</view>
+      <view>学科层次</view>
+      <view>院校类型</view>
+      <view>985</view>
+      <view>211</view>
+      <view>双一流</view>
+      <view>院系数</view>
+      <view>专业数</view>
+      <view>博士点</view>
+      <view>硕士点</view>
+      <view>男生占比</view>
+      <view>女生占比</view>
+    </view>
+    <scroll-view scroll-x style='width:75vw;height:100%;overflow:hidden;white-space:nowrap;display:flex;position:relative'> 
+      <view wx:for="{{compareInfo}}" class='compare-left content-font'>
+        <view style='height:14vw;white-space: pre-wrap;padding:2vw;position:relative;overflow:hidden'>
+          <view class='zhejiang-info-color'>{{item.CollegeName}}</view>
+          <view bindtap='compareClose' data-index='{{index}}' style='position:absolute;top:-4.9vw;right:-4.9vw;width:10vw;height:10vw;transform:rotate(45deg);background:#d7d7d7'></view>
+          <view bindtap='compareClose' data-index='{{index}}' style='position:absolute;top:0;right:1vw;color:#fff'>x</view>
+        </view>
+        <block wx:if="{{cityId==843 || cityId==842}}">
+          <view>{{item.PlanNum=="登录可见"?"创建成绩可见":item.PlanNum}}</view>
+          <view>{{item.ZhaoShengProfessionCount=="登录可见"?"创建成绩可见":item.ZhaoShengProfessionCount}}</view>
+        </block>
+        <block wx:else>
+          <view>{{item.MinScore=="登录可见"?"创建成绩可见":item.MinScore}}</view>
+          <view>{{item.LowSort=="登录可见"?"创建成绩可见":item.LowSort}}</view>
+          <view>{{item.PlanNum=="登录可见"?"创建成绩可见":item.PlanNum}}</view>
+          <view>{{item.ZhaoShengProfessionCount=="登录可见"?"创建成绩可见":item.ZhaoShengProfessionCount}}</view>
+          <view>{{item.EnterPro=="登录可见"?"创建成绩可见":item.EnterPro}}</view>
+        </block>
+        <view>{{item.RankOfCn}}</view>
+        <view>{{item.ProvinceName}}</view>
+        <view>{{item.Creation}}</view>
+        <view>{{item.CollegeType}}</view>
+        <view>{{item.Belong==""?'-':item.Belong}}</view>
+        <view>{{item.IsBen}}</view>
+        <view>{{item.Classify}}</view>
+        <view wx:if="{{item.Is985=='1'}}"><image src='../../image/compare-dui.png'></image></view>
+        <view wx:else>-</view>
+        <view wx:if="{{item.Is211=='1'}}"><image src='../../image/compare-dui.png'></image></view>
+        <view wx:else>-</view>
+        <view wx:if="{{item.FirstClass!=''}}"><image src='../../image/compare-dui.png'></image></view>
+        <view wx:else>-</view>
+        <view>{{item.DepartmentCount=="0"?'-':item.DepartmentCount}}</view>
+        <view>{{item.ProfessionCount}}</view>
+        <view>{{item.PointsOfBo=="0"?'-':item.PointsOfBo}}</view>
+        <view>{{item.PointsOfShuo=="0"?"-":item.PointsOfShuo}}</view>
+        <view>{{item.Male=="0%"?"-":item.Male}}</view>
+        <view>{{item.FeMale=="0%"?"-":item.FeMale}}</view>
+      </view>
+      <view bindtap='addCompare' class='compare-left content-font' style='position:absolute'>
+        <view class='borderBottom' style='font-size:15vw;color:#f0eff5;height:14vw;padding:2vw'>+</view>
+      </view>
+    </scroll-view>
+  </view>
+</block>

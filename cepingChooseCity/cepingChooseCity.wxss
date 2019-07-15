@@ -1,0 +1,7 @@
+.chooseCity-wrapper{ display: flex;justify-content:space-around;flex-wrap:wrap;background: #fff;padding: 10vw 0 0 0;}
+.chooseCity-wrapper view{width: 25vw;margin: 2vw;text-align: center;line-height: 2.5;border-radius: 17px;border:1px solid #f0eff5;}
+.chooseCity-wrapper .on{background: #e9302d; color: #fff !important;border: 1px solid #e9302d;box-shadow:0px 0px 5px #e9302d;}
+/*  提示--即将开放  */
+.zanTishi {position: absolute;top: 50%;left: 50%;background: rgba(0, 0, 0, 0);color: #fff;border-radius: 10px;width: 40vw;text-align: center;line-height: 4;margin-left: -20vw;margin-top: -5vw;}
+.zanTishiAnimate{animation: zanTishi 2s ease;}
+@keyframes zanTishi{0%{}50%{background:rgba(0, 0, 0, 1);}100%{background:rgba(0, 0, 0, 0);}}

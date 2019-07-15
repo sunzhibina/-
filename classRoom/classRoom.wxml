@@ -1,0 +1,90 @@
+<page>
+  <!-- <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop> -->
+
+  <view class="container video-title-color" style='position:relative'>
+    <!--  顶部讲堂/课堂 + search  -->
+    <!-- <view class='flex videoTop'>
+      <image bindtap='goHistory' src='../../image/clock.png'></image>
+      <image bindtap='goSearch' src='../../image/search_fff.png'></image>
+    </view> -->
+    <!--  1  -->
+    <swiper class="scroll-view_H" indicator-dots="true" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#fff" interval="3000" autoplay="true" circular="true" style="width: 100%;height:60vw;white-space: nowrap;">
+      <block wx:for="{{banner}}" wx:key="">
+        <swiper-item>
+          <navigator hover-class="none" url='../classRoomDetail/classRoomDetail?type=1&id={{item.videoId}}'>
+            <image src='{{item.pictureUrl}}' mode='aspectFill' lazy-load="{{true}}" style='background:#f0eff5'></image>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--  2  -->
+    <view class='classRoom-nav'>
+      <view>
+        <navigator hover-class="none" url="../classRoomList/classRoomList?SubjectId=0&name=志愿课堂">
+          <image src='../../image/classRoom_icon1.png'></image>
+          <view>志愿课堂</view>
+        </navigator>
+      </view>
+      <view>
+        <navigator hover-class="none" url="../classRoomList/classRoomList?SubjectId=1&name=高考提分">
+          <image src='../../image/classRoom_icon2.png'></image>
+          <view>高考提分</view>
+        </navigator>
+      </view>
+      <view>
+        <navigator hover-class="none" url="../classRoomList/classRoomList?SubjectId=2&name=专业解读">
+          <image src='../../image/classRoom_icon3.png'></image>
+          <view>专业解读</view>
+        </navigator>
+      </view>
+      <view>
+        <navigator hover-class="none" url="../classRoomList/classRoomList?SubjectId=3&name=大学展播">
+          <image src='../../image/classRoom_icon4.png'></image>
+          <view>大学展播</view>
+        </navigator>
+      </view>
+    </view>
+    <!--  3  -->
+    <view class='subjectWrapper'>
+      <block wx:for="{{videoDeZhiHits}}" wx:key="">
+        <navigator class='subject-wrapper' style='{{index==2 || index==5 || index==8?"border-right:0":""}}' url='../classRoomList/classRoomList?SubjectId={{item.subjectId}}&name={{item.subjectName}}'>
+          <view class='subject-top-wrapper'>
+            <image src='../../image/{{item.subjectId}}.png'></image>
+            <view>{{item.subjectName}}</view>
+          </view>
+          <view class='subject-bottom-wrapper point-font'>
+            <image src='../../image/classRoom_eye.png'></image>
+            <view class='video-hot-color'>{{item.hits}}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <!--  4  -->
+    <view class='newClassWrapper'>
+      <view class='newClassTitle video-title-color'>最新课程</view>
+      <navigator url='../classRoomDetail/classRoomDetail?type=1&id={{item.numId}}' hover-class="none" wx:for="{{newClassList}}" wx:key="" class='newClass-wrapper'>
+        <image class='newClass-left' src='{{item.pictureUrl}}' lazy-load="{{true}}" style='background:#f0eff5'></image>
+        <view class='newClass-right'>
+          <text class='newClassRight'>
+            <text class='title-font newClass-right-title video-title-color'>{{item.title}}</text>
+          <text class='newClass-right-content'>\n{{item.introduction}}</text>
+          </text>
+          <view class='newClass-right-bottom'>
+            <view class='point-font video-hot-color'>{{item.videoItemCount}}课时</view>
+            <view class='subject-bottom-wrapper point-font' style='margin:0'>
+              <image src='../../image/classRoom_eye.png'></image>
+              <view>{{item.hit}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <block wx:if="{{showMore==true}}">
+      <view wx:if="{{loadMore==true}}" style='display:flex;justify-content:space-around;background:#f0eff5;'>
+        <view style='display:flex;align-items:center;'>
+          <image src='../../image/loading.gif' style='width:4vw;height:4vw;margin-right:2vw'></image> 数据加载中...</view>
+      </view>
+      <view wx:if="{{loadMore==false}}" style='background:#f0eff5;text-align:center'>已加载全部</view>
+    </block>
+  </view>
+</page>

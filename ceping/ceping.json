@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "选科/测评",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true ,
+  "usingComponents": {
+    "loading": "/components/loading/loading",
+    "serverfail": "/components/serverFail/serverFail"
+  }
+}

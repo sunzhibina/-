@@ -1,0 +1,50 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class="container">
+  <view class='search-wrapper'>
+    <view class='search search-view content-color' bindtap="goSearch">输入大学名称
+      <image src='../../image/search_icon.png'></image>
+    </view>
+  </view>
+  <view class='content-color content-wrapper lishijilu'>
+    <text>历史记录</text>
+    <image bindtap='clearjilu' style='width:3vw;height:3.5vw' src='../../image/laji_icon.png'></image>
+
+  </view>
+  <block wx:if="{{scoreLineArr==true}}">
+    <scroll-view scroll-y bindscrolltolower="scrollToLower" bindscroll="scroll" style='white-space: nowrap;height:84.6vhvh;'>
+
+      <block wx:if="{{cityId==843 || cityId==842}}">
+        <view class='collegeList' wx:for="{{collegeList}}" wx:key="" wx:for-item="college" data-id='{{college.CollegeId}}' data-name='{{college.CnName}}' data-ucode='{{college.UCode}}' bindtap='redirect'>
+          <image class='collegeList-img' src='{{college.Logo.PictureUrl}}'></image>
+          <view class='collegeInfo-right'>
+            <view class='collegeInfo-top'>
+              <text class='title-font'>{{college.CnName}}</text>
+              <text class='levevs'> {{college.Level}}</text>
+            </view>
+            <view class='collegeInfo-bottom'>
+              综合排名:
+              <text>{{college.RankOfCn}}</text>
+              <!-- {{college.PreviousYear}}录取线:
+            <text>{{college.PreviousEnter==0?'-':college.PreviousEnter}}</text> 计划:
+            <text>{{college.PreviousPlan==0?'-':college.PreviousPlan}}</text> -->
+            </view>
+          </view>
+          <image class='right-logo' src='../../image/right_logo.png'></image>
+        </view>
+      </block>
+      <block wx:else>
+        <view bindtap='redirect' data-id='{{item.Id}}' data-name='{{item.CnName}}' wx:for="{{collegeList}}" wx:key="" class='zhejiangBorderBottom flex content-wrapper' style='justify-content:space-between;line-height:3;'>
+          <view class='title-font'>{{item.CnName}}</view>
+          <image src='../../image/right_logo.png' style='width:2vw;height:4vw;'></image>
+        </view>
+      </block>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{scoreLineArr==false}}">
+    <view class='loading search-loading'>
+      <image src='../../image/error_icon2.png' style='width:28vw;height:27vw;'></image>
+      <view class='content-font' style='margin-top:5.56vw;margin-left:-5vw;text-align:left;width:35vw'>您还没有相关历史记录</view>
+    </view>
+  </block>
+</view>

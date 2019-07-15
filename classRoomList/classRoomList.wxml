@@ -1,0 +1,51 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='content-font firstList {{down==true?"down":""}}'>
+  <view bindtap='chooseClassRoom' wx:for="{{chooseKetang}}" wx:key="" data-name='{{item.name}}' data-SubjectId='{{item.SubjectId}}'>{{item.name}}</view>
+</view>
+<view bindtap='hideKetang' wx:if="{{down==true}}" class='firstList-bottom {{down==true?"hide":""}}'></view>
+<view>
+  <view class='nav'>
+    <view bindtap='chooseKetang' class='{{down==true?"newOrHot":""}}' style='display:flex;justify-content:center;'>{{navName}}
+      <view class='image' style='display:flex;align-items:center;'>
+        <image wx:if='{{down==false}}' src='../../image/down_logo.png'></image>
+        <image wx:if='{{down==true}}' src='../../image/up_icon_red.png'></image>
+      </view>
+    </view>
+    <view bindtap='newChoose' class='{{sortType==1?"newOrHot":""}}'>最新</view>
+    <view bindtap='hotChoose' class='{{sortType==2?"newOrHot":""}}'>最热</view>
+  </view>
+  <block wx:if="{{bufenLoad}}">
+    <view class='loading content-font'>
+      <image src='../../image/loading_icon1.gif'></image>
+      <view style='margin-top:5.56vw'>数据加载中...</view>
+    </view>
+  </block>
+  <block wx:else>
+    <scroll-view scroll-y bindscrolltolower="scrollToLower" class='classRoomList-wrapper container' style='height:82vh'>
+      <navigator url='../classRoomDetail/classRoomDetail?type={{item.type}}&id={{item.numId}}' hover-class="none" wx:for="{{newClassList}}" wx:key="" class='newClass-wrapper '>
+        <image class='newClass-left' src='{{item.imgUrl}}' lazy-load="{{true}}" style='background:#f0eff5'></image>
+        <view class='newClass-right'>
+          <text class='newClassRight'>
+            <text class='title-font newClass-right-title video-title-color'>{{item.title}}</text>
+          <text class='newClass-right-content'>\n{{item.intro}}</text>
+          </text>
+          <view class='newClass-right-bottom'>
+            <view class='point-font'>{{item.itemsCount}}课时</view>
+            <view class='subject-bottom-wrapper point-font' style='margin:0'>
+              <image src='../../image/classRoom_eye.png'></image>
+              <view>{{item.hits}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+      <block wx:if="{{showMore==true}}">
+        <view wx:if="{{loadMore==true}}" style='display:flex;justify-content:space-around;background:#f0eff5;'>
+          <view style='display:flex;align-items:center;'>
+            <image src='../../image/loading.gif' style='width:4vw;height:4vw;margin-right:2vw'></image> 数据加载中...</view>
+        </view>
+        <view wx:if="{{loadMore==false}}" style='background:#f0eff5;text-align:center'>已加载全部</view>
+      </block>
+    </scroll-view>
+  </block>
+</view>

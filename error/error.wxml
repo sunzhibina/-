@@ -1,0 +1,1 @@
+<serverfail id="serverfail" bind:confirmEvent="_confirmEvent"></serverfail>

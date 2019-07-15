@@ -1,0 +1,109 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+<view class='itemBackColor'>
+<view class='pageItemWidth itemBackColor' style="">
+  <!--
+    <view style='width: 80vw;background:#E8E8E8;' class='searchView-viewH  flex searchBorder'>
+      <view class='twoFontSize publicSearchView twoFontColor flex'>
+        <image src='/image/publicSearchIcon.png'></image>
+        <input style='width:54.4vw;' bindinput='searchValue' bindconfirm="searchResults" bindblur="blur" bindfocus="focus" focus="{{focus}}" class='twoFontColor threeFontSize' maxlength='20' value="{{value}}" placeholder='搜索感兴趣的文章、大学、专业、课程'></input>
+      </view>
+    </view>
+    <view bindtap='cancelTap' class='checkedColor twoFontSize'>取消</view>
+  </view> -->
+  <view class='searchWrapper flex ' style=''>
+        <!-- <view bindtap='provinceTap' class='checkedColor flex provinceView oneFontSize'>{{province}}
+          <image src='../../../image/down_icon.png'></image>
+        </view> -->
+        <view style='background:#E8E8E8;' class='pageItemWidth searchView-viewH flex searchBorder'>
+          <view class='twoFontSize searchView twoFontColor' bindtap="goSearch">
+            <image src='/image/publicSearchIcon.png'></image>输入大学名称
+          </view>
+        </view>
+        <!-- <view bindtap='returnCancel' style='width:8vw;'>取消</view> -->
+      </view>
+  <view class='flex pageItemWidth flexjsaround twoFontSize threeFontColor' style='height:12.8vw;'>
+
+    <view class='relativeStyle' data-current="{{index}}" wx:key="unique" bindtap="swiperNav" style='width:100%;' wx:for="{{resultTabList}}">
+
+      <view class='{{currentTab==index?"oneFontSize fourFontColor":""}} textAlign'>{{item}}</view>
+      <view style='left:50%;transform:translate(-50%);margin-top:2.4vw;' class='absoluteStyle'>
+        <view class='checkedBackColor {{currentTab==index?"selectLineWH":""}} '></view>
+      </view>
+
+
+    </view>
+
+  </view>
+
+
+
+
+</view>
+</view>
+<!-- <view class='allPageBGcolor cutLineWH' style=''></view> -->
+
+<swiper current="{{currentTab}}" bindchange="bindchange" duration="400" style='height:80vh;'>
+  <swiper-item>
+    <scroll-view scroll-y style='height:80vh; '>
+      <view style='margin:2.13vw 0;' class='itemBackColor' wx:for-item="collegeListSingle" wx:for="{{collegeList}}" wx:key="unique">
+        <view class='collegeListCardSingle pageItemWidth flex cardBorder textPadding threeFontSize'>
+          <image class='collegeLogo' src='{{collegeListSingle.collegeIcon}}'></image>
+
+          <view class='' data-id="{{index}}" bindtap='goCollegeDetail'>
+            <view class=''>
+              <view style='' class='oneFontSize oneFontWidth'>{{collegeListSingle.name}}
+                <!-- margin-left: 2.67vw;margin-bottom:1.07vw; -->
+                <text wx:for="{{collegeTerrace}}" style='vertical-align:middle;' wx:key="unique" class='terraceBorderText fiveFontSize checkedColor'>{{item}}</text>
+              </view>
+            </view>
+            <view style='margin:1.33vw 0 0 0;' class='twoFontColor threeFontSize flex flexjsbetween'>
+              <view>{{collegeListSingle.collegeTag}}</view>
+              <view class='flex'>
+                <image style='height:2.93vw;width:2.4vw;margin-right:1.07vw;' mode='widthFix' src='/image/city.png'></image>
+                <view style=''>
+                  {{collegeListSingle.city}}
+                </view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+
+    <scroll-view scroll-y style='height:80vh; '>
+      <view style='margin:2.13vw 0;' class='itemBackColor' wx:for-item="collegeListSingle" wx:for="{{collegeList}}" wx:key="unique">
+        <view class='collegeListCardSingle pageItemWidth flex cardBorder textPadding threeFontSize'>
+          <image class='collegeLogo' src='{{collegeListSingle.collegeIcon}}'></image>
+
+          <view class='' data-id="{{index}}" bindtap='goCollegeDetail'>
+            <view class=''>
+              <view style='' class='oneFontSize oneFontWidth'>{{collegeListSingle.name}}
+                <!-- margin-left: 2.67vw;margin-bottom:1.07vw; -->
+                <text wx:for="{{collegeTerrace}}" style='vertical-align:middle;' wx:key="unique" class='terraceBorderText fiveFontSize checkedColor'>{{item}}</text>
+              </view>
+            </view>
+            <view style='margin:1.33vw 0 0 0;' class='twoFontColor threeFontSize flex flexjsbetween'>
+              <view>{{collegeListSingle.collegeTag}}</view>
+              <view class='flex'>
+                <image style='height:2.93vw;width:2.4vw;margin-right:1.07vw;' mode='widthFix' src='/image/city.png'></image>
+                <view style=''>
+                  {{collegeListSingle.city}}
+                </view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+  <swiper-item></swiper-item>
+  <swiper-item></swiper-item>
+
+</swiper>

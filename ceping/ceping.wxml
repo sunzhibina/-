@@ -1,0 +1,82 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+<block wx:if="{{showLoad}}">
+  <loading></loading>
+</block>
+<block wx:else>
+  <block wx:if="{{serverfail==true}}">
+    <serverfail id="serverfail" bind:confirmEvent="_confirmEvent"></serverfail>
+  </block>
+  <block wx:else>
+    <view class="swiper-tab title-font">
+      <view class="swiper-tab-list {{currentTab==0 ? 'info info-border' : ''}}" data-current="0" bindtap="swichNav">专业定位测评</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'info info-border' : ''}}" data-current="1" bindtap="swichNav">360°学业测评</view>
+    </view>
+    <swiper current="{{currentTab}}" duration="400" circular="true" bindchange="change" class='container' style='height:80vh;background:#fff;'>
+      <swiper-item>
+        <scroll-view scroll-y style='height:80vh;'>
+          <view style='text-align:center;'>
+            <image src='../../image/ceping_come_logo.png' mode="widthFix" style='width:85vw;height:75.5vw;margin-top:10vw;'></image>
+          </view>
+          <view class='threeFontSize fourFontColor' style='width:82vw;padding:4.3vw;margin:2vw auto 5vw; '>
+            <view class='flex'>
+              <view style='width:1.6vw;height:1.6vw;border-radius:100%;background:#E9302D;margin-right:4vw;'></view>
+              <view>五大维度充分认知自己</view>
+            </view>
+            <view class='flex'>
+              <view style='width:1.6vw;height:1.6vw;border-radius:100%;background:#E9302D;margin-right:4vw;'></view>
+              <view>家长&学生双向测评，跳出片面认知</view>
+            </view>
+            <view class='flex'>
+              <view style='width:1.6vw;height:1.6vw;border-radius:100%;background:#E9302D;margin-right:4vw;'></view>
+              <view>共 120 题目，预计 15 分钟内完成</view>
+            </view> 
+          </view>
+          <view class='flex oneFontSize' style='width:90vw;height:height:11.73vw;line-height:11.73vw;text-align:center;margin:0 auto 10vw;color:#fff;border-radius:11.73vw;overflow:hidden;'>
+            <view bindtap='studentEvaluation' style='background:#F56767;width:45vw;'>学生测评</view>
+            <view bindtap='parentEvaluation' style='background:#FFB272;width:45vw;'>家长测评</view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y style='height:80vh;padding:0 4vw 4vw 4vw;'>
+          <view bindtap='goCepingTijian' data-type='{{item.type}}' data-introOne='{{item.intro1}}' data-introTwo='{{item.intro2}}' data-introThree='{{item.intro3}}' data-reportnum='{{item.reportNum}}' data-name='{{item.name}}' data-intropicurl='{{item.introPicUrl}}'
+            class='flex cepingList' wx:for="{{cepingList}}" wx:key="" style='background:{{item.bgColor}};'>
+            <image wx:if="{{item.reportNum>0}}" src='../../image/ceping-logo.png' style='position:absolute;width:8.47vw;height:6.53vw;top:-1vw;left:5vw;'></image>
+            <view class='flex' style='width:50.56vw;flex-direction:column;justify-content:space-between'>
+              <view style='width:100%;'>
+                <view style='font-size:4.44vw;padding:4vw 0 0 4vw;color:#fff;'>{{item.name}}</view>
+              </view>
+              <view class='point-font' style='margin-top:3vw;padding:0 0 4vw 4vw;'>{{item.smallIntro}}</view>
+            </view>
+            <image src='{{item.picUrl}}' style='width:36.8vw;height:36.8vw;'></image>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </block>
+</block>
+<view wx:if='{{sexPopup.sexFlag}}'>
+  <view catchtap='hideSexPopup' class='wrap {{sexPopup.wrapAnimate}}' style='background:rgba(0,0,0,{{sexPopup.bgOpacity}});'></view>
+  <view class='{{sexPopup.popupAnimate}} popup-wrapper'>
+    <view class='titlePopup'>选择性别</view>
+    <view class='contentPopup'>为确保结果准确性，请选择性别</view>
+    <view class='flex chooseSex-wrapper'>
+      <view bindtap='chooseSex' data-sex="1">男生</view>
+      <view bindtap='chooseSex' data-sex="0">女生</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view wx:if='{{popup.popupFlag}}'>
+  <view catchtap='hidePopup' class='wrap {{popup.wrapAnimate}}' style='background:rgba(0,0,0,{{popup.bgOpacity}});'></view>
+  <view class='{{popup.popupAnimate}} popup-wrapper'>
+    <view class='titlePopup'>提示</view>
+    <view class='contentPopup'>请选择您的角色？</view>
+    <view class='flex chooseSex-wrapper'>
+      <view bindtap='chooseParent' data-sex="0">母亲</view>
+      <view bindtap='chooseParent' data-sex="1">父亲</view>
+    </view>
+  </view>
+</view>

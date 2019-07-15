@@ -1,0 +1,19 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='container'>
+  <view class='batch-wrapper'>
+    <view style='width:27vw;'>报考批次</view>
+    <view style='width:45vw;'>{{ProvinceControLineYear}}批次控制线</view>
+    <view style='width:27vw;'>选择</view>
+  </view>
+  <view wx:for="{{gaokaoScore}}" wx:key="" wx:for-item="gaokaoScore" class='batch-wrapper'>
+    <view style='width:27vw;'>{{gaokaoScore.batchName}}</view>
+    <view style='width:45vw;'>文科:{{gaokaoScore.ArtsScore}} 理科:{{gaokaoScore.SciencesScore}}</view>
+    <view style='width:27vw;'>
+      <block wx:if="{{gaokaoScore.batch==batch || gaokaoScore.batch==batch+1}}">
+        <block wx:if="{{gaokaoScore.InnerBatches.length>0}}"><view wx:for="{{gaokaoScore.InnerBatches}}" wx:for-item="InnerBatches" data-batchName='{{gaokaoScore.batchName}}' data-batchId='{{gaokaoScore.batch}}' data-groupName='{{InnerBatches.Name}}' bindtap='chooseBatchGroup' class='chooseBtn'>{{InnerBatches.Name}}</view></block>
+        <block wx:else><view data-batchName='{{gaokaoScore.batchName}}' data-batchId='{{gaokaoScore.batch}}' bindtap='chooseBatch' class='chooseBtn'>选择</view></block> 
+      </block>
+    </view>
+  </view> 
+</view>

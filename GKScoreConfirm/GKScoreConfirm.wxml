@@ -1,0 +1,36 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='container title-font' style='min-height:100vh;line-height:4'>
+  <view wx:if="{{cityId!=843 && cityId!=842}}" class='flex zhejiangBorderBottom zhejiangBorderTop'>
+    <view class='zhejiangBorderRight confirm-title'>科类</view>
+    <view class='confirm-content'>{{course==0?'理科':'文科'}}</view>
+  </view>
+  <view class='flex zhejiangBorderBottom {{cityId==843 || cityId==842?"zhejiangBorderTop":""}}'>
+    <view class='zhejiangBorderRight confirm-title'>高考分数</view>
+    <view class='confirm-content'>{{score}} 分</view>
+  </view>
+  <view class='flex zhejiangBorderBottom'>
+    <view class='zhejiangBorderRight confirm-title'>高考位次</view>
+    <view class='confirm-content'>{{rank==0?'-':rank}} 位</view>
+  </view>
+  <view wx:if="{{cityId==843}}" class='flex zhejiangBorderBottom'>
+    <view class='zhejiangBorderRight confirm-title'>选科</view>
+    <view class='confirm-content'>{{chooseLevelname1}}/{{chooseLevelname2}}/{{chooseLevelname3}}</view>
+  </view>
+  <view wx:if="{{cityId==842}}" class='flex zhejiangBorderBottom'>
+    <view class='zhejiangBorderRight confirm-title'>科目</view>
+    <view class='confirm-content'>{{chooseLevelname1}}/{{chooseLevelname2}}/{{chooseLevelname3}}</view>
+  </view>
+  <view wx:if="{{cityId==1}}" class='flex zhejiangBorderBottom confirm-wrapper'>
+    <view class='zhejiangBorderRight confirm-title flex'>选测</view>
+    <view style='width:60vw;background:#fff;'>
+      <view class='zhejiangBorderBottom' style='padding-left:5vw;'>{{chooseLevelname1}} {{chooseLevelLetter1}}</view>
+      <view style='padding-left:5vw;'>{{chooseLevelname2}} {{chooseLevelLetter2}}</view>
+    </view>
+  </view>
+  <view class='flex info content-wrapper' style='background:#f0eff5;'><view class='dian'></view>出分后，一个账号只能创建一个高考分数，不可修改</view>
+</view>
+<view class='flex bottomBtn-wrapper'>
+  <view bindtap='returnCreateScore' class='againCreate zhejiang-content-color'>重新创建</view>
+  <button loading="{{querenLoading}}" bindtap='createGKScore' class='btn-color confirmBtn'>确认</button>
+</view>

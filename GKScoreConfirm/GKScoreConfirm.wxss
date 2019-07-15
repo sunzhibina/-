@@ -1,0 +1,7 @@
+.dian{width:2vw;height:2vw;background:#e9302d;border-radius:100%;margin-right:2vw;}
+.confirm-wrapper{align-items:stretch;}
+.confirm-title{width:35vw;padding-left:5vw;}
+.confirm-content{width:55vw;background:#fff;padding-left:5vw;}
+.bottomBtn-wrapper{position: fixed;bottom: 4vw;justify-content: space-around;width: 96vw;padding: 0 2vw}
+.againCreate{border: 1px solid #999;border-radius: 5px;height: 12vw;width:30vw;text-align: center;line-height:12vw;}
+.confirmBtn{width: 60vw;height: 12vw;line-height: 12vw;color: #fff;text-align: center;border-radius: 5px;border: 1px solid #e9302d;}

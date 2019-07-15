@@ -1,0 +1,132 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<block wx:if="{{cityId==842}}">
+  <view class='content-font zhejiang-info-color'>
+    <view class='content-wrapper shangHaiTop'>
+      <view class='flex'>
+        成绩：
+        <input type='digit' bindinput="enterInput" data-type='getFen' value='{{getFen}}' placeholder='输入成绩' maxlength='3' class='zhejiang-info-color' value='{{getFen}}'></input>
+      </view>
+      <view class='flex' style='margin-top:4vw'>
+        位次：
+        <input type='number' bindinput="enterInput" data-type='weiFen' placeholder='输入位次' maxlength='5' class='zhejiang-info-color' value='{{weiFen}}' value='{{weiFen}}'></input>
+      </view>
+    </view>
+    <view class='flex content-wrapper'>
+      <view>选科：</view>
+      <view class='shangHaiBottom'>
+        <block wx:for="{{shangHaiSubject}}" wx:key="">
+          <view class='zhejiang-content-color {{item.st==true?"shangHaiBottom-items-checked":"shangHaiBottom-items"}}' data-name='{{item.name}}' bindtap='chooseShangHaiSubject'>{{item.name}}
+            <image wx:if="{{item.st==true}}" src='../../image/subject_checked_icon.png'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <button class='tuijian-btn btn-font btn-color' bindtap='commonTuijian'>确定</button>
+  </view>
+</block>
+<block wx:elif="{{cityId==843}}">
+</block>
+<block wx:else>
+  <view class='content-font zhejiang-info-color'>
+    <view class="swiper-tab title-font">
+      <view class="swiper-tab-list {{currentTab==0 ? 'info info-border' : ''}}" data-current="0" bindtap="swichNav" style='width:25vw;'>预估总分</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'info info-border' : ''}}" data-current="1" bindtap="swichNav" style='width:25vw;'>线差</view>
+    </view>
+    <swiper current="{{currentTab}}" circular="true" bindchange="change">
+      <swiper-item>
+        <view class='content-wrapper shangHaiTop'>
+          <view class='flex'>
+            科类：
+            <view class='flex' style='width:70vw;margin-left:4vw;justify-content:space-between;'>
+              <view bindtap='{{checked==true?"chooseCourse":""}}' data-course='1' class='courseStyle' style='{{courseType==1?"background:#e9302d;color:#fff":""}}'>文科</view>
+              <view bindtap='{{checked==true?"chooseCourse":""}}' data-course='0' class='courseStyle' style='{{courseType==0?"background:#e9302d;color:#fff":""}}'>理科</view>
+            </view>
+          </view>
+          <view class='flex' style='margin-top:4vw'>
+            总分：
+            <input type='digit' bindinput="enterInputJS" data-type='getFen' value='{{getFen}}' placeholder='在此输入高考/模考总分' maxlength='3' class='zhejiang-info-color' value='{{getFen==0?"":getFen}}'></input>
+          </view>
+          <view wx:if="{{cityId==1}}" class='flex' style='margin-top:4vw;line-height:3;'>
+            选测：
+            <view class='flex' style='margin-left:4vw'>
+              <picker style='width:35vw;text-align:center;' mode="selector" bindchange="bindRegionHistory" value="{{historyIndex}}" range="{{history}}">
+                <view class="picker">
+                  <text wx:if="{{courseType==1}}" style='margin-right:2vw'>历史</text>
+                  <text wx:if="{{courseType==0}}" style='margin-right:2vw'>物理</text>
+                  <text class='font' style='width:5vw;display:inline-block;'>{{history[historyIndex]}}</text>
+                  <image src='../../image/down_icon.png' style='width:4vw;height:2vw;'></image>
+                </view>
+              </picker>
+              <view style='display:flex'>
+                <picker style='width:35vw;text-align:center;' mode="multiSelector" bindchange="bindRegionKemu" value="{{kemuIndex}}" range="{{kemu}}">
+                  <view class="picker">
+                    <text style='margin-right:2vw'>{{kemu[0][kemuIndex[0]]}}</text>
+                    <text class='font' style='width:5vw;display:inline-block;'>{{kemu[1][kemuIndex[1]]}}</text>
+                    <image src='../../image/down_icon.png' style='width:4vw;height:2vw;'></image>
+                  </view>
+                </picker>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='content-wrapper shangHaiTop'>
+          <view class='flex'>
+            科类：
+            <view class='flex' style='width:70vw;margin-left:4vw;justify-content:space-between;'>
+              <view bindtap='{{checked==true?"chooseCourse":""}}' data-course='1' class='courseStyle' style='{{courseType==1?"background:#e9302d;color:#fff":""}}'>文科</view>
+              <view bindtap='{{checked==true?"chooseCourse":""}}' data-course='0' class='courseStyle' style='{{courseType==0?"background:#e9302d;color:#fff":""}}'>理科</view>
+            </view>
+          </view>
+          <view class='flex' style='margin-top:4vw'>
+            线差：
+            <view class='flex'>
+              <picker style='width:20vw;margin-left:4vw;' mode="selector" bindchange="bindRegionXianCha" value="{{xianChaIndex}}" range="{{xianCha}}">
+                <view style=''>
+                  <text style='padding:0 2.1vw;'>{{xianCha[xianChaIndex]}}</text>
+                  <image src='../../image/down_icon.png' style='width:4vw;height:2vw;'></image>
+                </view>
+              </picker>
+              <input style='width:50vw;margin-left:0;' type='digit' bindinput="enterInputJS" data-type='xianChaFen' value='{{xianChaFen}}' placeholder='请输入线差(0-{{lineGapMax}})' maxlength='3' class='zhejiang-info-color'></input>
+            </view>
+          </view>
+          <view wx:if="{{cityId==1}}" class='flex' style='margin-top:4vw;line-height:3;'>
+            选测：
+            <view class='flex' style='margin-left:4vw'>
+              <picker style='width:35vw;text-align:center;' mode="selector" bindchange="bindRegionHistory" value="{{historyIndex}}" range="{{history}}">
+                <view class="picker">
+                  <text wx:if="{{courseType==1}}" style='margin-right:2vw'>历史</text>
+                  <text wx:if="{{courseType==0}}" style='margin-right:2vw'>物理</text>
+                  <text class='font' style='width:5vw;display:inline-block;'>{{history[historyIndex]}}</text>
+                  <image src='../../image/down_icon.png' style='width:4vw;height:2vw;'></image>
+                </view>
+              </picker>
+              <view style='display:flex'>
+                <picker style='width:35vw;text-align:center;' mode="multiSelector" bindchange="bindRegionKemu" value="{{kemuIndex}}" range="{{kemu}}">
+                  <view class="picker">
+                    <text style='margin-right:2vw'>{{kemu[0][kemuIndex[0]]}}</text>
+                    <text class='font' style='width:5vw;display:inline-block;'>{{kemu[1][kemuIndex[1]]}}</text>
+                    <image src='../../image/down_icon.png' style='width:4vw;height:2vw;'></image>
+                  </view>
+                </picker>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!-- <view class='flex content-wrapper'>
+      <view>选科：</view>
+      <view class='shangHaiBottom'>
+        <block wx:for="{{shangHaiSubject}}">
+          <view class='zhejiang-content-color {{item.st==true?"shangHaiBottom-items-checked":"shangHaiBottom-items"}}' data-name='{{item.name}}' bindtap='chooseShangHaiSubject'>{{item.name}}
+            <image wx:if="{{item.st==true}}" src='../../image/subject_checked_icon.png'></image>
+          </view>
+        </block>
+      </view>
+    </view> -->
+    <button class='tuijian-btn btn-font btn-color' bindtap='commonTuijian'>创建成绩</button>
+  </view>
+</block>

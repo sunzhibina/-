@@ -1,0 +1,10 @@
+  <navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='container' style='height:100vh;text-align:center;'>
+  <image src="../../image/active-shareSuccess.png" style='width:25vw;height:25vw;margin-top:23.2vw;'></image>
+  <view style='font-size:6vw;font-weight:bold;margin-top:5.56vw;'>已激活{{CardPermissionName}}</view>
+  <view class='zhejiang-info-color'>通过手机号+初始密码在电脑版同步登录</view>
+</view>
+<!-- <view class='flex' style='height:13.2vw;position:fixed;bottom:0;'> -->
+  <button class='bangding-btn bangdingsuc-btn btn-font' style='position:absolute;bottom:5vw;background:#{{color}};box-shadow:0px 0px 5px #{{color}}' bindtap='goIndex'>去首页</button>
+<!-- </view> -->

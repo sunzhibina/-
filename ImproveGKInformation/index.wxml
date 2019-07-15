@@ -1,0 +1,91 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<block>
+  <view class='oneFontColor pageItemWidth'>
+    <view style='padding:5.6vw 0 7.2vw 0;'>
+      <view class='sixFontSize' style='line-height:1.5'>完善高考信息</view>
+      <view class='tips threeFontColor twoFontSize'>保存后不可修改，请认真选择</view>
+    </view>
+    <view class='oneFontSize'>
+      <block>
+        <view class='itemTitle'>高考省份</view>
+        <view class='borderTwo flex itemBackColor flexjsbetween' bindtap='provinceTap' style='height:13.87vw;padding:0 4.27vw;'>
+          <view class='flex flexjsbetween'>
+            <image src='/image/locate.png' mode='widthFix' style='margin-right:4.27vw;' class='itemIconWH'></image>
+            <view>{{GKProvince}}</view>
+          </view>
+          <image class='moreArrowIconWH' mode='widthFix' src='/image/moreArrow.png'></image>
+        </view>
+      </block>
+      <block>
+        <view class='itemTitle'>高考年份</view>
+        <view class='borderTwo flex itemBackColor flexjsbetween' bindtap='showYearTap' style='height:13.87vw;padding:0 4.27vw;'>
+          <view class='flex flexjsbetween'>
+            <image src='/image/year.png' style='width:4.27vw;height:3.73vw;margin-right:4.27vw;' mode='widthFix' class='itemIconWH'></image>
+            <view>{{GKYear}}</view>
+          </view>
+          <view>
+            <image class='moreArrowIconWH' mode='widthFix' src='/image/moreArrow.png'></image>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{courseFlag}}">
+        <view class='itemTitle'>考生科类</view>
+        <view class='flex flexjsbetween'>
+          <view class='borderTwo flex itemBackColor borderBox flexjscenter {{courseId==1?"buttonBorder checkedColor":"twoFontColor"}}' id="1" bindtap='chooseCourseTap' style='width:43.73vw;height:12.8vw;'>
+            <view>文科</view>
+          </view>
+          <view class='borderTwo flex borderBox itemBackColor flexjscenter {{courseId==0?"buttonBorder checkedColor":"twoFontColor"}}' id="0" bindtap='chooseCourseTap' style='width:43.73vw;height:12.8vw;'>
+            <view>理科</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view>
+      <button class='whiteFontColor absoluteStyle pageItemWidth oneFontSize gradientThree' loading="{{loadingBtn}}" bindtap='completeBtnTap' style='box-shadow: 0 2px 3px 2px rgba(250,149,150,0.30);border-radius: 6.13vw;bottom: 6.67vw;height:11.73vw;'>修改完成</button>
+    </view>
+  </view>
+</block>
+
+<block>
+  <!-- 省份列表 -->
+  <bottomFrame id="frameprovince" bind:hideEvent='hideYearFrame' frameTitle="{{frameProvinceTitle}}">
+    <view style='padding:4vw 0 0 0;'>
+      <scroll-view scroll-y style='height:70vh;'>
+
+        <view wx:for="{{cityList}}" id="{{index}}" bindtap='chooseCityTap' hover-class='itemHover' class='flex {{index+1<cityList.length?"bottomBorder":""}} pageItemWidth' style='padding:4vw 0;' wx:key="unique">
+          <view class='oneFontSize'>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+
+  </bottomFrame>
+
+
+
+  <!-- 高考年份列表  -->
+  <bottomFrame id="frameyear" catch:touchmove='catchMove' bind:hideEvent='hideYearFrame' frameTitle="{{yearFrameTitle}}">
+    <view style='padding:4vw 0 0 0;'>
+      <view wx:for="{{GKYearList}}" id="{{index}}" bindtap='yearTap' hover-class='itemHover' class='flex {{index+1<GKYearList.length?"bottomBorder":""}}' style='padding:4vw 0;' wx:key="unique">
+        <view style='width:83.73vw;' class='oneFontSize textOmit'>{{item.text}}</view>
+      </view>
+    </view>
+  </bottomFrame>
+  <!-- 二次确认 -->
+  <bottomFrame id="framemodal" bind:hideEvent='hideModalFrame' frameTitle="{{frameModalTitle}}">
+    <view style='padding:6.67vw 0 4vw 0' class='bottomBorder sevenFontSize textAlign'>{{comfirmData.province}} {{comfirmData.year}} {{comfirmData.course}}</view>
+    <view class='fourFontColor' style='padding-top:4vw'>
+      <view class='flex '>
+        <image style='width:4.53vw;' mode='widthFix' src='/image/warn.png'></image>
+        <view style='line-height:6.93vw;padding-left:1.6vw;' class='oneFontSize'>请注意：</view>
+      </view>
+      <view style='line-height:6.93vw;padding-top:2.93vw;' class='twoFontSize'>
+        <view> 1.高考信息修改后将会被锁定 </view>
+        <view> 2.修改之前创建的成绩及志愿表将会被清空 </view>
+      </view>
+      <view style='padding: 6.67vw 0;'>
+        <button class='whiteFontColor pageItemWidth oneFontSize gradientThree' loading="{{loadingConfirm}}" bindtap='confirmBtnTap' style='box-shadow: 0 2px 3px 2px rgba(250,149,150,0.30);border-radius: 6.13vw;height:11.73vw;'>确认修改</button>
+      </view>
+    </view>
+  </bottomFrame>
+</block>

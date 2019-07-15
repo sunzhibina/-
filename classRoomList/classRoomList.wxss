@@ -1,0 +1,40 @@
+.container {
+  background: #fff;
+}
+
+.newClass-left {
+  width: 33vw;
+}
+
+.nav {
+  display: flex;
+  font-size: 4.17vw;
+  color: #808080;
+  line-height: 3;
+  z-index: 3;
+  width: 100vw;
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #f0eff5;
+}
+
+.nav>view {
+  width: 33.33%;
+  text-align: center;
+}
+
+.firstList>view {
+  width: 33.33%;
+  display: inline-block;
+  padding: 5vw 0;
+  text-align: center;
+}
+
+.firstList {
+  background: #fff;
+  width: 100vw;
+  position: fixed;
+  top: -85vh;
+  z-index: 2;
+  padding-top: 15vw;
+}

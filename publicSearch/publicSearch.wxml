@@ -1,0 +1,28 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class='pageItemWidth' style="">
+  <view class='publicSearchWrapper flex flexjsbetween' style=''>
+    <!-- <view bindtap='provinceTap' class='checkedColor flex provinceView oneFontSize'>{{province}}
+      <image src='/image/down_icon.png'></image>
+    </view> -->
+    <view style='width: 80vw;background:#E8E8E8;' class='searchView-viewH  flex searchBorder'>
+      <view class='twoFontSize publicSearchView twoFontColor flex'>
+        <image src='/image/publicSearchIcon.png'></image>
+        <input style='width:54.4vw;' bindinput='searchValue' bindconfirm="searchResults" bindblur="blur" bindfocus="focus" focus="{{focus}}" class='twoFontColor threeFontSize' maxlength='20'  value="{{value}}" placeholder='{{placeholder}}'></input>
+      </view>
+    </view>
+    <view bindtap='cancelTap' class='checkedColor twoFontSize'>取消</view>
+
+    <!-- <view bindtap='returnCancel' style='width:8vw;'>取消</view> -->
+  </view>
+  <view style='margin:5.87vw 0 0 0;' class='flex flexjsbetween'>
+    <view class='oneFontColor twoFontSize'>搜索记录</view>
+    <image wx:if="{{deleteIcon}}" bindtap='deleteHistoryStorageTap' class='iconWH' src='/image/historyDelete.png'></image>
+  </view>
+  <view class='flex ' style='flex-wrap:wrap;'>
+    <view wx:for="{{historyList}}" class='blockBackColor' style='margin:3.2vw 2.67vw 0 0;border-radius:4vw' wx:key="unique">
+      <view style='padding:1.87vw 3.2vw;' class='twoFontColor threeFontSize flex letterBreak'>{{item}}</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,25 @@
+<navigationcustomtop navigationText='{{navigationText}} ' navigationCustomStatusHeight="{{navigationCustomStatusHeight}}" navigationCustomCapsuleHeight='{{navigationCustomCapsuleHeight}}' id="navigationcustom"> </navigationcustomtop>
+
+<view class="content-font">
+  <view class="dep-top-wrapper content-wrapper title-font">
+    <view>学院数：<text class='count-font'>{{departmentList.AcademyCount==0?'--':departmentList.AcademyCount}}</text></view>
+    <view>院系数：<text class='count-font'>{{departmentList.DepartmentCount==0?'--':departmentList.DepartmentCount}}</text></view>
+  </view>
+  <block wx:if="{{departmentList.AcademyModel.length>0}}">
+    <view wx:for="{{departmentList.AcademyModel}}" wx:key="">
+      <view data-id='{{index}}' bindtap='openDepList' class='content-wrapper dep-list'>
+        <view>{{item.AcademyName}}</view>
+        <view>{{item.DepartmenModel.length}}</view>
+      </view>
+      <view data-id='{{index}}' class='show {{id==index?"":"hide"}}'>
+        <view wx:for="{{item.DepartmenModel}}" wx:key="" wx:for-item="model" class='content-color content-wrapper'>
+          <text wx:if="{{model.DepartmentName!=null}}">{{model.DepartmentName}}({{model.AdultExamination}})</text>
+          <text wx:if="{{model.DepartmentName==null}}">数据整理中...</text>
+        </view>
+      </view> 
+    </view>
+  </block>
+  <block wx:else>
+    <view class='zhejiang-content-color content-wrapper'>数据整理中...</view>
+  </block>
+</view>

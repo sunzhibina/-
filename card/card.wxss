@@ -1,0 +1,74 @@
+page{min-height: 100vh;background:#f8f5f4;}
+button[disabled]{color:#fff !important;}
+.container {
+  line-height: 3;
+}
+.zycardInput {
+  margin: 0 0 4.3vw 0;
+}
+.inputHeight {
+  height: 10.7vw;
+  margin: 0 0 0 4.3vw;
+}
+.buyCard-view {
+  margin: 0 0 5.33vw 1px;
+}
+.buyCard {
+  font-family: PingFangSC-Regular;
+  font-size: 4vw;
+  color: #666;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 4vw;
+}
+.bindBtn {
+  margin: 0;
+  border-radius: 1.6vw;
+  width: 78.67vw;
+  height: 11.73vw;
+  font-size: 4.8vw;
+  letter-spacing: 0;
+  line-height: 4.8vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bindCardTitle {
+  font-size: 6.4vw;
+  color: #000;
+  margin: 4vw 0 8.53vw 0;
+  line-height: 6.4vw;
+}
+.ZYCardImage {
+  width: 65.74vw;
+  height: 43.47vw;
+  margin: 0 6.94vw;
+}
+
+.windowClose {
+  height: 8.54vw;
+  width: 8.54vw;
+  position: relative;
+  left: 35.74vw;
+}
+
+.window-wrapper {
+  position: absolute;
+  top: 56.94vw;
+  width: 80vw;
+  left:50%;
+  margin-left: -40vw;
+  background: #fff;
+  border: 0 solid #fff;
+  border-radius: 4vw;
+}
+
+.showCard {
+  font-size: 5.34vw;
+  color: #333;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 6.67vw;
+  margin: 7.47vw 0 1.07vw 7.34vw;
+}

@@ -1,0 +1,2 @@
+.batch-wrapper{display: flex;border-bottom:1px solid #f0eff5;line-height: 3;text-align: center;background: #fff;align-items: center;}
+.chooseBtn{background: #e9302d;color:#fff;line-height: 2;border-radius: 15px;width:20vw;display:inline-block;}
