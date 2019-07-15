@@ -1,0 +1,5 @@
+<template name="collegeTerrace">
+  <view class='terraceBorder checkedColor'>
+    <view style='padding:0 1.67vw;'>{{item}}</view>
+  </view>
+</template>

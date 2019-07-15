@@ -1,0 +1,42 @@
+.collegeListCardSingle {
+  justify-content: space-between;
+  /* padding: 0.27vw 1.33vw;
+  border: 1px solid #e9302d;
+  line-height: 14px;
+  min-width: 9.07vw;
+  text-align: center; */
+}
+
+.iconMargin {
+  margin-right: 1.33vw;
+}
+
+.collegeLogo {
+  width: 9.07vw;
+  height: 9.07vw;
+  margin-right: 3.2vw;
+}
+
+/* .rankIcon {
+  height: 2.67vw;
+  width: 2.93vw;
+}
+
+.locateIcon {
+  width: 2.4vw;
+  height: 2.93vw;
+}
+
+.courseIcon {
+  height: 3.2vw;
+  width: 2.67vw;
+} */
+
+.terraceBorder {
+  min-width: 9.07vw;
+  margin-right: 1.07vw;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #f66666;
+  border-radius: 1.07vw;
+}

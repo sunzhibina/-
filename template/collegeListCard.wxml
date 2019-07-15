@@ -1,0 +1,36 @@
+<import src="collegeTerrace.wxml" />
+
+<template name="collegeListCard">
+  <view style='margin:2.13vw 0;' class='collegeListCardSingle pageItemWidth flex whiteColor cardBorder textPadding threeFontSize'>
+    <image class='collegeLogo' src='{{collegeIcon}}'></image>
+
+    <view class='' data-id="{{index}}" bindtap='goCollegeDetail'>
+      <view class='flex'>
+        <view style='' class='oneFontSize oneFontWidth'>{{name}}
+          <!-- <text wx:for="{{collegeTerrace}}" >
+          <template is="collegeTerrace" data="{{item}}" /> -->
+          <text style='margin-left: 2.67vw;'>
+          <text wx:for="{{collegeTerrace}}" wx:key="unique" class='terraceBorder checkedColor'>{{item}}</text>
+          </text>
+        </view>
+        <!-- <view style='margin:1.33vw 0 0 0;' class='twoFontColor twoHeight'>{{collegeTag}}</view> -->
+        <!-- <view style='margin:2.13vw 0;' class='collegeTag flex'> -->
+
+      </view>
+    </view>
+    <!-- <view class='flex twoFontColor'>
+        <view class='flex' style='margin-right:3.2vw;'>
+          <image src='/image/bendi.png' class='rankIcon iconMargin'></image>
+          {{rank}}
+        </view>
+        <view class='flex' style='margin-right:3.2vw;'>
+          <image src='/image/bendi.png' class='courseIcon iconMargin'></image>
+          {{course}}
+        </view>
+        <view class='flex'>
+          <image src='/image/bendi.png' class='locateIcon iconMargin'></image>
+          {{city}}
+        </view>
+      </view> -->
+  </view>
+</template>
