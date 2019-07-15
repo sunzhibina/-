@@ -1,0 +1,6 @@
+<view wx:if="{{flag}}" style='position:absolute;top:{{top}};left:0;padding-top:2.5vw;z-index:2'>
+  <view class='dropDown-wrapper {{dropDownAnimate}}'>
+    <view wx:for="{{items}}" wx:key="" data-value='{{item.value}}' bindtap='_chooseEvent' style='{{index==items.length-1?"border:none":""}}'>{{item.name}}</view>
+  </view>
+  <view class='triangle {{dropDownAnimate}}'></view> 
+</view>

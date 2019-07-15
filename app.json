@@ -1,0 +1,218 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bindMobile/index",
+    "pages/ImproveGKInformation/index",
+    "pages/commonWebPage/commonWebPage",
+    "pages/payPage/payPage",
+    "pages/payInfoConfirm/payInfoConfirm",
+    "pages/payInfo/payInfo",
+    "pages/majorList/majorList",
+    "pages/majorDetail/majorDetail",
+    "pages/majorCeping/majorCeping",
+    "pages/createScore/createScore",
+    "pages/cityList/cityList",
+    "pages/collegeType/collegeType",
+    "pages/collegeRecommendDetail/collegeRecommendDetail",
+    "pages/collegeRecommend/collegeRecommend",
+    "pages/collegeDetail/collegeDetail",
+    "pages/cepingReady/cepingReady",
+    "pages/cepingReadyList/cepingReadyList",
+    "pages/centerMajor/centerMajor",
+    "pages/bindCardSuccess/bindCardSuccess",
+    "pages/batchList/batchList",
+    "pages/ZYTableCommonDetail/ZYTableCommonDetail",
+    "pages/ZYTableCommon/ZYTableCommon",
+    "pages/ZYTable/ZYTable",
+    "pages/YJTBzyTable/YJTBzyTable",
+    "pages/YJTBRecommend/YJTBRecommend",
+    "pages/VIPpower/VIPpower",
+    "pages/error/error",
+    "pages/GKScoreConfirm/GKScoreConfirm",
+    "pages/card/card",
+    "pages/GKpower/GKpower",
+    "pages/quickNews/quickNews",
+    "pages/my/my",
+    "pages/ceping/ceping",
+    "pages/commonSearch/commonSearch",
+    "pages/searchZixuan/searchZixuan",
+    "pages/major/major",
+    "pages/cepingChooseCity/cepingChooseCity",
+    "pages/cepingQuestion/cepingQuestion",
+    "pages/cepingBaoGao/cepingBaoGao",
+    "pages/wanshanUser/wanshanUser",
+    "pages/indexChooseCity/indexChooseCity",
+    "pages/score/score",
+    "pages/webPage/webPage",
+    "pages/search/search",
+    "pages/collegeDepartment/collegeDepartment",
+    "pages/collegeCompareDetail/collegeCompareDetail",
+    "pages/collegeCompare/collegeCompare",
+    "pages/searchCollegeList/searchCollegeList",
+    "pages/collegeIntro/collegeIntro",
+    "pages/classRoomList/classRoomList",
+    "pages/classRoomDetail/classRoomDetail",
+    "pages/classRoom/classRoom",
+    "pages/publicSearch/publicSearch",
+    "pages/publicSearchResult/publicSearchResult"
+  ],
+  "subPackages": [
+    {
+      "root": "packages/ImproveGKScore",
+      "pages": [
+        "index/index"
+      ]
+    },
+    {
+      "root": "packages/searchMajor",
+      "pages": [
+        "index/index",
+        "QueryAllMajors/QueryAllMajors",
+        "details/details"
+      ]
+    },
+    {
+      "root": "packages/evaluation",
+      "pages": [
+        "evaluationStart/evaluationStart",
+        "parentComplete/parentComplete"
+      ]
+    },
+    {
+      "root": "packages/paySystem",
+      "pages": [
+        "memberCardDetail/memberCardDetail",
+        "payFail/payFail",
+        "payStatus/payStatus",
+        "paySuccess/paySuccess",
+        "payInfo/payInfo",
+        "index/index"
+      ]
+    },
+    {
+      "root": "packages/userSystem",
+      "pages": [
+        "evaluationReport/evaluationReport",
+        "testResult/testResult",
+        "questionFeedBack/questionFeedBack",
+        "learnHistory/learnHistory",
+        "probabilityReport/probabilityReport",
+        "ZYTableReport/ZYTableReport"
+      ]
+    },
+    {
+      "root": "packages/testEnterPercent",
+      "pages": [
+        "index/index",
+        "testResult/testResult"
+      ]
+    },
+    {
+      "root": "packages/fractionLine",
+      "pages": [
+        "index/index",
+        "scoreLineSearch/scoreLineSearch",
+        "searchCollege/searchCollege"
+      ]
+    },
+    {
+      "root": "packages/common",
+      "pages": [
+        "publicSearch/publicSearch",
+        "search/search",
+        "commonSearch/commonSearch",
+        "searchZixuan/searchZixuan",
+        "batchList/batchList",
+        "publicSearchResult/publicSearchResult"
+      ]
+    },
+    {
+      "root": "packages/findUniversity",
+      "pages": [
+        "index/index",
+        "line/line",
+        "collegeSight/collegeSight",
+        "collegeDetail/collegeDetail",
+        "collegeMajor/collegeMajor",
+        "allCollege/allCollege",
+        "myCollege/myCollege",
+        "collgeAdmissionsGuide/collgeAdmissionsGuide",
+        "guideDetail/guideDetail",
+        "specialMajor/specialMajor",
+        "collegeRank/collegeRank",
+        "collegeCompare/collegeCompare",
+        "collegeCompareDetail/collegeCompareDetail",
+        "collegeIntroduction/collegeIntroduction"
+      ]
+    },
+    {
+      "root": "packages/recommend/",
+      "pages": [
+        "jiangsuRecommend/jiangsuRecommend",
+        "shanghaiRecommend/shanghaiRecommend",
+        "collegeRecommend/collegeRecommend",
+        "zhejiangScore/zhejiangScore",
+        "cityList/cityList",
+        "collegeType/collegeType"
+      ]
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": " "
+    }
+  },
+  "usingComponents": {
+    "serverfail": "/components/serverFail/serverFail",
+    "bottomFrame": "components/bottomFrame/bottomFrame",
+    "topMenu": "components/topMenu/topMenu",
+    "loading": "components/loading/loading",
+    "rightdrawermenu": "components/rightDrawerMenu/rightDrawerMenu",
+    "dropDownMenu": "components/dropDownMenu/dropDownMenu",
+    "navigationcustomtop": "components/navigationCustomTop/navigationCustomTop"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000
+  },
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5053",
+    "backgroundColor": "#fff",
+    "color": "#7b7b7b",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "填志愿",
+        "iconPath": "./image/footer_icon1_no.png",
+        "selectedIconPath": "./image/footer_icon1.png"
+      },
+      {
+        "pagePath": "pages/ceping/ceping",
+        "text": "测评",
+        "iconPath": "./image/footer_icon4_no.png",
+        "selectedIconPath": "./image/footer_icon4.png"
+      },
+      {
+        "pagePath": "pages/classRoom/classRoom",
+        "text": "课堂",
+        "iconPath": "./image/footer_icon3_no.png",
+        "selectedIconPath": "./image/footer_icon3.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./image/footer_icon2_no.png",
+        "selectedIconPath": "./image/footer_icon2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

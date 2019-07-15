@@ -1,0 +1,24 @@
+.wrapAnimate{animation: wrapAnimate 0.5s ease-in-out forwards}
+@keyframes wrapAnimate{
+  0%{}
+  100%{background:rgba(0,0,0,0.35);}
+}
+.wrapAnimateOut{animation: wrapAnimateOut 0.4s ease-in-out forwards}
+@keyframes wrapAnimateOut{
+  0%{background:rgba(0,0,0,0.35);}
+  100%{background:rgba(0,0,0,0);}
+}
+.menuAnimate{animation: menuAnimate 0.5s ease forwards;}
+@keyframes menuAnimate{
+  0%{}
+  100%{opacity: 1;top:0vh;}
+}
+.menuAnimateOut{animation: menuAnimateOut 0.4s ease forwards;}
+@keyframes menuAnimateOut{
+  0%{opacity: 1;top:0vh;}
+  100%{opacity: 0;top:-100vh;}
+}
+.menu-wrapper{position: fixed;height:100vh;width:100vw;z-index: 6;top: -100vh;}
+.menu{background: #fff;width: 100vw;z-index: 3;position: absolute;padding-top:20px;margin-top: -20px;}
+.flex{display: flex;align-items: center;}
+.wrap{position: fixed;z-index: 1;top: 0;left: 0;right: 0;bottom: 0;}

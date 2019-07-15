@@ -1,0 +1,50 @@
+/* components/rightDrawerMenu/rightDrawerMenu.wxss */
+
+.shaixuan-container .shaixuan-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+
+.shaixuan-container{position:fixed;top:0;left:100vw;width:100vw;height:100vh;background: rgba(0, 0, 0, 0.5);z-index:5}
+
+.shaixuan-animate {
+  animation: shaixuan 0.5s ease forwards;
+}
+
+@keyframes shaixuan {
+  0% {
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.content-font {
+  font-size: 3.33vw;
+}
+
+.shaixuan-animate-out {
+  animation: shaixuanOut 0.5s ease forwards;
+}
+
+@keyframes shaixuanOut {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100vw;
+  }
+}
+
+.shaixuan-content {
+  width: 75vw;
+  height: 94vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 20px 20px 20px;
+}

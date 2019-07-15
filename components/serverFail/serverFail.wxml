@@ -1,0 +1,9 @@
+<!--  高考版友情提示  -->
+<view class='service-wrapper'>
+  <view>
+    <image src='../../image/error_icon1.png' mode='widthFix'></image>
+    <view class='textBiao'>服务器通讯故障</view>
+    <view class='textContent'>请检查网络或联系我们</view>
+    <view class='again' catchtap='_confirmEvent'>重试</view>  
+  </view>
+</view>

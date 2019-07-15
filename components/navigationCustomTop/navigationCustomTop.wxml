@@ -1,0 +1,21 @@
+<view wx:if="{{navigationCustomTopShow}}" class='navigationCustomTop'>
+  <view style='height:{{navigationCustomStatusHeight+navigationCustomCapsuleHeight}}px'></view>
+  <view class='navigationCustomTopAll'>
+    <!-- 手机顶部状态栏高度 -->
+    <view style='height:{{navigationCustomStatusHeight}}px'> </view>
+    <!-- 手机胶囊高度 --> 
+    <view style='height:{{navigationCustomCapsuleHeight}}px;line-height:{{navigationCustomCapsuleHeight}}px' class='navigationCustomTopMain'>
+      <view class='navigationAllIconButton' style='display:flex;height:{{navigationCustomCapsuleHeight}}px' wx:if="{{navigationHome}}">
+        <view wx:if="{{share==false}}" class='backIconButton' bindtap='backIconButtonTap'>
+          <image mode='widthFix' style='max-height:20px' src='../../image/returnBtn.png'></image>
+        </view>
+        <view class='homeIconButton' bindtap='homeIconButtonTap' style='{{share==false?"border-left: 1px solid #666;":""}}'>
+          <image mode='widthFix' style='max-height:20px' src='../../image/return-Home.png'></image>
+        </view>
+      </view>
+      <!-- <view class="flex" style> -->
+      <view style='line-height:{{navigationCustomCapsuleHeight}}px' class='navigationText title-font'> {{navigationText}} </view>
+      <!-- </view> -->
+    </view>
+  </view> 
+</view>

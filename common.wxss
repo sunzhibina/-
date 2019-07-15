@@ -1,0 +1,136 @@
+/*页面整体背景色*/
+.allPageBGcolor {background: #f8f5f4;}
+/*白色背景*/
+.itemBackColor {background: #fff;}
+.whiteColor {background: #fff;}
+/*白色文字*/
+.whiteFontColor {color: #fff;}
+/*选中的颜色*/
+.checkedColor {color: #e9302d;}
+/*选中的背景颜色*/
+.checkedBackColor {background: #e9302d;}
+/*未选择块的背景颜色*/
+.blockBackColor {background: #f7f7f7;}
+/*第一类文字的字体大小-16*/
+.oneFontSize {font-size: 4.27vw;}
+/*第一类文字的折行宽度*/
+.oneFontWidth {width: 79.2vw;}
+/*第一类文字的颜色*/
+.oneFontColor {color: #212121;}
+/*第二类文字的颜色*/
+.twoFontColor {color: #757575;}
+/*第二类文字的大小-14*/
+.twoFontSize {font-size: 3.73vw;}
+/*第二类文字的高度*/
+.twoHeight {height: 4.53vw;}
+/*第三类文字的颜色*/
+.threeFontColor {color: #9b9b9b;}
+/*第三类文字的大小-12*/
+.threeFontSize {font-size: 3.2vw;}
+/*第四类文字的大小-18*/
+.fourFontSize {font-size: 4.8vw;}
+.fourFontColor {color: #4a4a4a;}
+/*第四类文字的折行宽度*/
+.fourFontWidth {width: 50.93vw;}
+/*第五类文字的大小-10*/
+.fiveFontSize {font-size: 2.67vw;}
+/*第六类文字的大小-26*/
+.sixFontSize {font-size: 6.93vw;}
+/*第六类文字的大小-20*/
+.sevenFontSize {font-size: 5.33vw;}
+/*卡片文字整体上下间距*/
+.textPadding {padding: 3.73vw 0;}
+/*正文边距*/
+.bodyPadding {padding: 0 5.33vw;}
+/*卡片弧度*/
+.cardBorder {border-radius: 2.67vw;margin: 2.13vw 0;}
+/*搜索框边框式样设定*/
+.searchBorder {border: 1px solid #ccc;border-radius: 4.8vw;}
+/*搜索框*/
+.searchView {position: relative;}
+/*搜索框中的搜索图标*/
+.searchView image {width: 3.47vw;height: 3.47vw;margin: 0 2.67vw 0 5.33vw;}
+.publicSearchView image {width: 3.47vw;height: 3.47vw;margin: 0 2.67vw 0 5.33vw;}
+/*搜索栏内*/
+/*搜索的省份*/
+.provinceView {width: 22.93vw;}
+/*搜索的省份的下箭头图片*/
+.provinceView image {width: 2.67vw;height: 1.6vw;margin: 0 0 0 1.07vw;}
+/*搜索框+省份*/
+.searchWrapper {padding: 2.13vw 0 0 0;}
+/*通用搜索框*/
+.publicSearchWrapper {padding: 2.13vw 0;position: relative;}
+/*985、211类似院校标签的外层式样*/
+.terraceBorder {margin-right: 1.07vw;box-sizing: border-box;text-align: center;border: 1px solid #f66666;border-radius: 1.07vw;}
+/*右边向右的箭头图片大小*/
+.rightIconWH {width: 1.87vw;height: 3.2vw;}
+/*项目条的点击态*/
+.itemHover {opacity: 0.8;}
+/*文字指定宽度并显示省略号*/
+.textOmit {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+/*项目条下方的分割线*/
+.bottomBorder {border-bottom: 1px solid #e9e9e9;}
+/*大学详情页面的专业块边框*/
+.disciplineBlock-border {border-radius: 3.47vw;border: 1px solid #ccc;}
+.grayBorder{border: 1px solid #ccc;}
+/*大学详情页面的专业块文字*/
+.disciplineBlock-text {padding: 0 2.13vw;height: 6.67vw;}
+/*文字折行*/
+.textBreak {white-space: normal;word-wrap: break-word;}
+/*44*/
+.buttonHeight{height:11.73vw;}
+/*54*/
+.operationItemWH {height: 14.4vw;width: 100%;}
+/*第一个按钮渐变色*/
+.gradientOne {background-image: linear-gradient(137deg, #ffa5a6 0%, #fa9596 100%);}
+.gradientTwo {background-image: linear-gradient(-52deg, #f84949 1%, #fa6565 100%);}
+.gradientThree {background-image: linear-gradient(-52deg, #e9302d 1%, #ff5053 100%);}
+.operationItemBtn {text-align: center;padding: 2.67vw 6.93vw;}
+.relativeStyle {position: relative;}
+.absoluteStyle {position: absolute;}
+.fixedStyle {position: fixed;}
+/*抽屉的下圆角*/
+.drawerRadius {border-radius: 0 0 2.67vw 2.67vw;}
+.itemListWidth {width: 83.73vw;}
+.pageItemWidth {width: 91.47vw;margin: 0 auto;}
+.flexjsbetween {justify-content: space-between;}
+.flexjsaround {justify-content: space-around;}
+.flexjscenter {justify-content: center;}
+.flexjsend {justify-content: flex-end;}
+.searchView-viewH {height: 9.6vw;}
+.down {animation: down 0.5s ease forwards;}
+@keyframes down {
+  from {
+  }
+  to {
+    top: 16vw;
+  }
+}
+.iconWH {width: 3.73vw;height: 3.73vw;}
+/*字母折行*/
+.letterBreak {word-wrap: break-word;word-break: break-all;}
+.textAlign {text-align: center;}
+.transReverse {transform: rotate(180deg);}
+.cutLineWH {height: 2.13vw;width: 100%;}
+.selectLineWH {width: 12.27vw;height: 0.8vw;border-radius: 0.4vw;}
+.borderBox {box-sizing: border-box;}
+/*找大学首页院校列表中，名字后面的标签式样*/
+.terraceBorderText {margin-right: 1.07vw;border: 1px solid #f66666;border-radius: 1.07vw;padding: 0 1.6vw;line-height: 1.4;}
+.LoadImgWH {width: 28.06vw;height: 25.14vw;}
+/*border-4*/
+.borderOne {border-radius: 1.07vw;}
+/*border=8*/
+.borderTwo {border-radius: 2.13vw;}
+/*订购成功页面的按钮弧度*/
+.borderThree {border-radius: 5.33vw;}
+.borderFour {border-radius: 6.13vw;}
+/*操作条的左右扩展*/
+.itemPaddingLR {padding-right: 4vw;padding-left: 4vw;}
+/*操作条的上下扩展*/
+.itemPaddingTB {padding-top: 4vw;padding-bottom: 4vw;}
+.buttonBorder {border: 1px solid #e9302d;}
+/*更多图标大小*/
+.moreArrowIconWH {width: 1.87vw;height: 3.2vw;}
+/*完善高考/考生信息的标题上下间隔*/
+.itemTitle {margin: 5.33vw 0 2.67vw 0;}
+.flexwrap {flex-wrap: wrap;}

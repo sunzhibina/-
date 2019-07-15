@@ -1,0 +1,9 @@
+<view wx:if='{{flag}}'>
+  <view class='wrap {{wrapAnimate}}' style='background:rgba(0,0,0,{{bgOpacity}});'></view>
+  <view catchtap='_hideEvent' data-type='{{type}}' class='menu-wrapper {{menuAnimate}}'>
+    <view catchtap='catchNone' class='menu' style='top:{{top}}px;'>
+      <!-- 内容 -->
+      <slot></slot>
+    </view>
+  </view>
+</view>

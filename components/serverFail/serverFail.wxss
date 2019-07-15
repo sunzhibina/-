@@ -1,0 +1,6 @@
+.again{border:1px solid #e9302d;width:20vw;border-radius:50px;margin:auto;margin-top:3vw;color:#e9302d;font-size:4vw; }
+.service-wrapper{background:#fff;justify-content:space-around;min-height:80vh;display: flex;align-items: center;line-height: 2;font-size: 3.33vw;color: #080808;}
+.service-wrapper>view{text-align:center;}
+.service-wrapper>view image{width:40vw;}
+.textBiao{font-weight:bold;margin-top:3vw;font-size: 4.4vw;color: #666;}
+.textContent{color: #999;}

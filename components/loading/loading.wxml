@@ -1,0 +1,6 @@
+<view class='loadingComponents'>
+  <view>
+    <image src='../../image/loading_icon1.gif'></image>
+    <view> 加载中... </view>
+  </view>
+</view>

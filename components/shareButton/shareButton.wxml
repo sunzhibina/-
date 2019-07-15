@@ -1,0 +1,36 @@
+<!--components/shareButton/shareButton.wxml-->
+
+
+<view class='shareButton'>
+  <view class='shareButtonMain' style='position:relative;width:66.7vw;height:12.5vw;left:50%;margin-left:-33.35vw;top:4.3vw;padding-bottom:3.72vw;'>
+    <form report-submit bindsubmit="_addFormid">
+      <button form-type="submit" loading='{{loadingBtn}}' disabled='{{loadingBtn}}' class='btn'>
+        <view class='title-font btnView'>
+          <form report-submit bindsubmit="_addFormid">
+            <button form-type="submit" loading='{{loadingBtn}}' disabled='{{loadingBtn}}' class='btn'>
+              <view class='title-font btnView'>
+                <form report-submit bindsubmit="_addFormid">
+                  <button form-type="submit" loading='{{loadingBtn}}' disabled='{{loadingBtn}}' class='btn'>
+                    <view class='title-font btnView'>
+                      <form report-submit bindsubmit="_addFormid">
+                        <button form-type="submit" loading='{{loadingBtn}}' disabled='{{loadingBtn}}' class='btn'>
+                          <view class='title-font btnView'>
+                            <form report-submit bindsubmit="_addFormid">
+                              <button form-type="submit" loading='{{loadingBtn}}' disabled='{{loadingBtn}}' class='btn'>
+                                <view class='title-font btnAnimate btnView' style='box-shadow: 0 5px 10px 0 rgba(233,48,45,0.3);'>我也要0元购</view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+  </view>
+</view>

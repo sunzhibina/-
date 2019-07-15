@@ -1,0 +1,542 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": false,
+		"newFeature": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wxad40758d7cae525c",
+	"projectname": "%E4%BC%98%E5%BF%97%E6%84%BFV3.0%E7%89%88",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "强制更新编译",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1008"
+				},
+				{
+					"id": 1,
+					"name": "分享编译",
+					"pathName": "pages/ActiveWishCome/ActiveWishCome",
+					"query": "showUrl=http://img3.youzy.cn/content/media/thumbs/p00033219.png&wishName=孙智斌",
+					"scene": "1036",
+					"referrerInfo": {
+						"appId": "wxad40758d7cae525c"
+					}
+				},
+				{
+					"id": -1,
+					"name": "公众号服务入口",
+					"pathName": "pages/searchCollege/searchCollege",
+					"query": "searchCollege=true",
+					"scene": "1092"
+				},
+				{
+					"id": 3,
+					"name": "识别二维码入口",
+					"pathName": "pages/ActiveWishCome/ActiveWishCome",
+					"query": "showUrl=http://img3.youzy.cn/content/media/thumbs/p00033626.png&wishName=孙智斌",
+					"scene": "1013"
+				},
+				{
+					"id": 4,
+					"name": "公众号文章",
+					"pathName": "pages/ActiveWishCome/ActiveWishCome",
+					"query": "showUrl=http://img3.youzy.cn/content/media/thumbs/p00040053.png&wishName=全国考生",
+					"scene": "1067"
+				},
+				{
+					"id": 5,
+					"name": "单个课堂详情分享链接",
+					"pathName": "pages/classRoomDetail/classRoomDetail",
+					"query": "id=538&type=1&userid=11487640&usertype=14",
+					"scene": "1008"
+				},
+				{
+					"id": 6,
+					"name": "公众号找大学",
+					"pathName": "pages/searchCollege/searchCollege",
+					"query": "searchCollege=true",
+					"scene": "1043",
+					"referrerInfo": {}
+				},
+				{
+					"id": -1,
+					"name": "公众号查专业",
+					"pathName": "pages/major/major",
+					"query": "major=true",
+					"scene": "1043",
+					"referrerInfo": {}
+				},
+				{
+					"id": 8,
+					"name": "课程分享入口",
+					"pathName": "pages/index/index",
+					"query": "classRoom=true",
+					"scene": "1008"
+				},
+				{
+					"id": 9,
+					"name": "测评分享入口",
+					"pathName": "pages/index/index",
+					"query": "ceping=true",
+					"scene": "1008"
+				},
+				{
+					"id": -1,
+					"name": "浙江志愿表",
+					"pathName": "pages/ZYTableDetail/ZYTableDetail",
+					"query": "id=1507",
+					"scene": "1008"
+				},
+				{
+					"id": -1,
+					"name": "推送进入",
+					"pathName": "pages/quickNews/quickNews",
+					"query": "",
+					"scene": "1008"
+				},
+				{
+					"id": -1,
+					"name": "浙江志愿表",
+					"pathName": "pages/ZYTableDetail/ZYTableDetail",
+					"query": "id=1584",
+					"scene": "1008"
+				},
+				{
+					"id": 13,
+					"name": "单个课堂详情分享链接",
+					"pathName": "pages/ActiveCome/ActiveCome",
+					"query": "showurl=http://img3.youzy.cn/content/media/thumbs/p00100742.png&name=小优&cityname=北京大学&cityid=843",
+					"scene": "1008"
+				},
+				{
+					"id": 14,
+					"name": "录取通知书",
+					"pathName": "pages/ActiveCome/ActiveCome",
+					"query": "showurl=http://img3.youzy.cn/content/media/thumbs/p00106998.png&cityid=842&cityname=北京大学&name=啊啊啊",
+					"scene": "1008"
+				},
+				{
+					"id": 15,
+					"name": "文章推送分享",
+					"pathName": "pages/PushArticle/PushArticle",
+					"query": "id=59668",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "推送支付",
+					"pathName": "pages/pay/pay",
+					"query": "share=true",
+					"scene": "1008"
+				},
+				{
+					"id": -1,
+					"name": "单个讲堂详情分享链接",
+					"pathName": "pages/classRoomDetail/classRoomDetail",
+					"query": "id=300045&type=2&userid=11487640&usertype=14",
+					"scene": "1008"
+				},
+				{
+					"id": 18,
+					"name": "游学分享",
+					"pathName": "pages/youxueDetail/youxueDetail",
+					"query": "share=true&projectid=4&orderno=_PO201809141310596068&time=01/21(星期一)-01/26(星期六)",
+					"scene": "1008"
+				},
+				{
+					"id": 19,
+					"name": "0元购活动分享",
+					"pathName": "pages/index/index",
+					"query": "activitybargain=true&bargainid=4000&shareuserid=12980620",
+					"scene": "1008"
+				},
+				{
+					"id": 20,
+					"name": "新年祝福活动分享",
+					"pathName": "pages/ActiveWishCome/ActiveWishCome",
+					"query": "showUrl=http://img3.youzy.cn/content/media/thumbs/p00147577.png&wishName=优志愿",
+					"scene": "1008"
+				},
+				{
+					"id": 21,
+					"name": "封装组件测试页面（popup、sharebutton）",
+					"pathName": "pages/testpage/testpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "手机号绑定调试",
+					"pathName": "pages/indexChooseCity/indexChooseCity",
+					"query": "mobilePhone=false",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员卡绑定调试",
+					"pathName": "pages/card/card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "找大学重构2.0",
+					"pathName": "packages/findUniversity/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "indexchoosecity",
+					"pathName": "pages/indexChooseCity/indexChooseCity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "完善user",
+					"pathName": "pages/wanshanUser/wanshanUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "完善高考信息重构",
+					"pathName": "packages/ImproveGKInformation/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 28,
+					"name": "新院校详情",
+					"pathName": "packages/findUniversity/collegeDetail/collegeDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "院校专业重构",
+					"pathName": "packages/findUniversity/collegeMajor/collegeMajor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "公共搜索重构",
+					"pathName": "pages/publicSearch/publicSearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "招生简章列表页",
+					"pathName": "packages/findUniversity/collgeAdmissionsGuide/collgeAdmissionsGuide",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 32,
+					"name": "招生简章详情",
+					"pathName": "packages/findUniversity/guideDetail/guideDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新分数线",
+					"pathName": "packages/fractionLine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "特色专业页面",
+					"pathName": "packages/findUniversity/specialMajor/specialMajor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 35,
+					"name": "院校介绍页面重构",
+					"pathName": "packages/findUniversity/collegeIntroduction/collegeIntroduction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 36,
+					"name": "江苏志愿填报参考右侧菜单",
+					"pathName": "pages/jiangsuRecommend/jiangsuRecommend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 37,
+					"name": "院校排名",
+					"pathName": "packages/findUniversity/collegeRank/collegeRank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "学校图片展示",
+					"pathName": "packages/findUniversity/collegeSight/collegeSight",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "院校介绍",
+					"pathName": "packages/findUniversity/collegeIntroduction/collegeIntroduction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "招生简章详情",
+					"pathName": "packages/findUniversity/guideDetail/guideDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 41,
+					"name": "公共搜索结果",
+					"pathName": "pages/publicSearchResult/publicSearchResult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 42,
+					"name": "测录取概率重构",
+					"pathName": "packages/testEnterPercent/testResult/testResult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 43,
+					"name": "测评结果",
+					"pathName": "packages/testEnterPercent/testResult/testResult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 44,
+					"name": "新我的重构",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 45,
+					"name": "我的学习重构",
+					"pathName": "packages/userSystem/learnHistory/learnHistory",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新会员卡详情",
+					"pathName": "packages/paySystem/memberCardDetail/memberCardDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "问题反馈",
+					"pathName": "packages/userSystem/questionFeedBack/questionFeedBack",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "一键绑定手机",
+					"pathName": "packages/bindMobile/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 49,
+					"name": "支付-页面定义不明确",
+					"pathName": "packages/paySystem/payInfo/payInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付-支付失败",
+					"pathName": "packages/paySystem/payFail/payFail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 51,
+					"name": "支付-主页",
+					"pathName": "packages/paySystem/index/index",
+					"query": "index=1",
+					"scene": null
+				},
+				{
+					"id": 52,
+					"name": "完善考生信息重构",
+					"pathName": "packages/ImproveStudentInfo/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付-支付状态：成功/失败",
+					"pathName": "packages/paySystem/payStatus/payStatus",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付-支付成功",
+					"pathName": "packages/paySystem/paySuccess/paySuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改成绩",
+					"pathName": "packages/modifyScore/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 56,
+					"name": "修改高考成绩",
+					"pathName": "packages/ImproveGKScore/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测评报告重构",
+					"pathName": "packages/userSystem/evaluationReport/evaluationReport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报告重构",
+					"pathName": "packages/userSystem/probabilityReport/probabilityReport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "高考Power",
+					"pathName": "pages/GKpower/GKpower",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "家长测评结果",
+					"pathName": "packages/evaluation/parentComplete/parentComplete",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "强制更新编译",
+					"pathName": "packages/findUniversity/collegeDetail/collegeDetail",
+					"query": "numId=3209&share=true",
+					"scene": null
+				},
+				{
+					"id": 62,
+					"name": "志愿表跳转",
+					"pathName": "pages/ZYTableCommonDetail/ZYTableCommonDetail",
+					"query": "id=131394&share=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测录取概率跳转",
+					"pathName": "packages/testEnterPercent/testResult/testResult",
+					"query": "course=0&score=350&batch=1&cityid=1&ucode=32_827_0_0&collegeid=827&insert=false&share=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "课堂app分享",
+					"pathName": "pages/classRoomDetail/classRoomDetail",
+					"query": "type=1&id=561&share=true",
+					"scene": null
+				},
+				{
+					"id": 65,
+					"name": "专业中类分享",
+					"pathName": "pages/majorList/majorList",
+					"query": "code=0101&cityid=834&share=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "专业小类分享",
+					"pathName": "pages/majorDetail/majorDetail",
+					"query": "code=010101&cityid=843&share=true",
+					"scene": null
+				},
+				{
+					"id": 67,
+					"name": "课堂分享",
+					"pathName": "pages/classRoomDetail/classRoomDetail",
+					"query": "type=1&id=564&share=true",
+					"scene": null
+				},
+				{
+					"id": 68,
+					"name": "讲堂分享",
+					"pathName": "pages/classRoomDetail/classRoomDetail",
+					"query": "type=2&id=100010&share=true",
+					"scene": null
+				}
+			]
+		}
+	}
+}

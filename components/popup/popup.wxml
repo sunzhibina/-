@@ -1,0 +1,46 @@
+<view wx:if="{{showPopupFlag}}" class='popupComponents'>
+
+  <view wx:if='{{popupType=="rule"}}'>
+    <view catchtap='_hideTap' class='wrap {{wrapAnimateMajor}}' style='background:rgba(0,0,0,{{bgOpacityMajor}});'></view>
+    <view class='{{popupAnimateMajor}} popup-wrapper'>
+
+      <image catchtap='_hideTap' src='../../image/icon_close_alt2.png' style='width:4vw;height:4vw;position:absolute;top:2vw;right:2vw;padding:4vw;margin:0;'></image>
+      <view class='' style='border-bottom: 1px solid #eee;line-height: 3;font-size: 4.5vw;margin-top: 2vw;'>{{title}}</view>
+      <view style='text-align:left;padding:0 4.3vw;line-height:2;font-size:3.6vw'>
+        <view id="index" style='display:flex' wx:for="{{popupContent}}" wx:key="*this">
+          <view>{{item}}</view>
+        </view>
+      </view>
+
+      <view wx:if="{{buttonShow}}" class='popupButtonView' style='text-align:left;padding:0 4.3vw;line-height:2;font-size:3.6vw'>
+        <view class='popupButton_left'>{{buttonLeftText}}</view>
+        <view class='popupButton_right'>{{buttonRightText}}</view>
+      </view>
+
+    </view>
+  </view>
+  <view wx:elif='{{popupType=="status"}}'>
+    <view catchtap='_hideTap' class='wrap {{wrapAnimateMajor}}' style='background:rgba(0,0,0,{{bgOpacityMajor}});'></view>
+    <view class='{{popupAnimateMajor}} popup-wrapper'>
+      <image catchtap='_hideTap' src='../../image/icon_close_alt2.png'></image>
+      <image src='../../image/active-shareSuccess.png'></image>
+      <view class='title-font'>您砍了 {{bargainPrice}} 元</view>
+
+      <view>{{statusText}}</view>
+      <button open-type="share" style='' class='title-font btnAnimate popup-wrapper-button'>{{shareButtonText}}</button>
+    </view>
+  </view>
+  <view wx:elif='{{popupType=="overtime"}}'>
+    <view catchtap='_hideTap' class='wrap {{wrapAnimateMajor}}' style='background:rgba(0,0,0,{{bgOpacityMajor}});'></view>
+    <view class='{{popupAnimateMajor}} popup-wrapper'>
+      <image catchtap='_hideTap' src='../../image/icon_close_alt2.png'></image>
+      <image src='../../packages/activityBargain/image/errorTips.png'></image>
+      <view class='title-font'>砍价已超时</view>
+      <view style='color:#999;font-size:3.3vw;margin-top:2.5vw;'>该订单暂不支持购买，可重新发起砍价！</view>
+      <view style='display:inline'>
+       <slot></slot> 
+      </view>
+
+    </view>
+  </view>
+</view>
